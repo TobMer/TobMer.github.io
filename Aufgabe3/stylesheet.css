@@ -3,7 +3,8 @@
 
 body{
 
-    background: #00FF00;
+    background-color: #00FF00;
+    margin: 8px;
 }
 
 h1{ font-family: Georgia, 'Times New Roman', Times, serif;
