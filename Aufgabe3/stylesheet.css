@@ -15,10 +15,13 @@ h1{ font-family: Helvetica, 'Times New Roman', Times, serif;
 }
 
 header{
-    color: #D2B48c;
+   
 }
 
-img{
-
-
+img.hundb{
+    float: right;
+    width: 234px;
+    height: 123px;
+    margin-left: 20px;
+    border: 1px solid red;
 }
