@@ -1,14 +1,15 @@
 
 /* Css Datei für die Homepage */
-
 body{
 
-    background-color: #00FF00;
-    margin: 10 px;
+    background-color: #FFc1c1;
+   font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10 px;
 }
 
 h1{ font-family: Helvetica, 'Times New Roman', Times, serif;
     color: #0000FF; 
+    margin-left: 100px;
 
 }
 
