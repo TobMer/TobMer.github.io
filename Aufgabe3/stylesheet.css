@@ -3,26 +3,55 @@
 body{
 
     background-color: #FFc1c1;
-   font-family: Arial, Helvetica, sans-serif;
+  
     margin-left: 10 px;
+}
+
+.anfang{
+background-color: #d2b48c;
+font-family: 'Courier New', Courier, monospace;
+margin-top: 100px;
+padding: 30px;
+
 }
 
 h1{ font-family: Helvetica, 'Times New Roman', Times, serif;
     color: #0000FF; 
     margin-left: 100px;
     text-align: center;
-
+    font-weight: bold;
 }
 
-header{
+li{
    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   font-size: 22px;
+   font-size: 20px;
+   margin-top: 10px;
 }
 
-img.hundb{
-    float: right;
-    width: 234px;
-    height: 123px;
-    margin-left: 20px;
-    border: 1px solid red;
+button{
+
+        background: linear-gradient(to bottom, white, red);
 }
+
+
+article {
+
+    text-align: center;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    
+}
+
+.boxerhund{
+    border: white;
+margin: 50px;
+border-radius: 90%;
+  
+}
+
