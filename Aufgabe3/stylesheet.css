@@ -10,9 +10,15 @@ body{
 h1{ font-family: Helvetica, 'Times New Roman', Times, serif;
     color: #0000FF; 
     margin-left: 100px;
+    text-align: center;
 
 }
 
 header{
     color: #D2B48c;
+}
+
+img{
+
+
 }
