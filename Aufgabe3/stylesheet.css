@@ -10,16 +10,16 @@ body{
 .anfang{
 background-color: #d2b48c;
 font-family: 'Courier New', Courier, monospace;
-margin-top: 100px;
-padding: 30px;
+margin-top: 50px;
+padding: 10px;
 
 }
 
-h1{ font-family: Helvetica, 'Times New Roman', Times, serif;
-    color: #0000FF; 
-    margin-left: 100px;
-    text-align: center;
-    font-weight: bold;
+h1{
+	font-family: Garamond, serif;
+	font-weight: normal;
+	margin-bottom: 4em;
+	text-align: center;
 }
 
 li{
@@ -48,10 +48,27 @@ h2{
     
 }
 
+
+
+.schnauzerhund{
+
+    border: white;
+    margin: 50px;
+    border-radius: 60%; /* Macht das Bild rund */
+}
+
 .boxerhund{
     border: white;
 margin: 50px;
-border-radius: 90%;
-  
+
 }
 
+.lol{
+
+    background-color: #ffdead;
+}
+
+.lfarbe {
+
+    background-color: #fafad2;
+}
