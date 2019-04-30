@@ -31,12 +31,12 @@ padding-inline-start: 200px;
 
 }
 
-li , .artikel{
+li ,  .artikel{
 display: block;
     
     text-align: center;
     padding: 14px 8%;
-
+    text-decoration: underline;
 }
 
 
@@ -46,7 +46,13 @@ li{
     }
     
 
+.artikel{ /* Stern Artikel hat einen Strich und ist blau */
 
+    font-family:cursive;
+    color: -webkit-link;
+    cursor: pointer;
+    
+}
 
 
   /* Überschrift */
@@ -68,12 +74,14 @@ h1:hover {
 }
 
 
-.sweetdog{
+ .sweetdog{
 
     margin-right: 4em;;
      margin-left: 7em;
   margin-bottom: 1em;
     width: 50%;
+   
+ 
     
 
 
@@ -112,15 +120,19 @@ button{
     border-radius: 15px;
     box-shadow: 0 9px #999;
  margin-right: 115pt;
- margin-left: 340pt;
+ margin-left: 440pt;
  padding: 10pt ;
  margin-bottom: 30pt;
  margin-top: 30pt;
+    
 
 }
 
 
-
+.klick{
+    float:left;
+    
+}
 
 
 
@@ -165,6 +177,7 @@ header{             /* header HIntergrundfarbe*/
 
     width:25%;
     float:left;
+   
 }
 
 
@@ -250,6 +263,7 @@ section{
     margin: 1%;
     overflow: auto;
     clear: none;
+    
 }
 
 footer{
@@ -260,13 +274,15 @@ text-align: center;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 border-bottom: 30px solid #000000; 
 margin-bottom: 10pt;
+margin-top:100pt;
 }
 
 p{
 
     font-family: 'Courier New', Courier, monospace;
     font-weight: 100;
-    color: #FFFACD;
+    color:#FFFACD;
+    padding:10pt;
 }
 
 .wrapper {
@@ -275,6 +291,7 @@ p{
     float: left;
     padding-left: 10px;
     height:1500px;
+margin-bottom:50pt;
     }
 
 
@@ -284,17 +301,25 @@ aside {
    width: 15%;
    height: 1500px; 
    padding-left: 20px;
-background-color: #000000;
+
 
    
 }
 
 aside p:hover
 {background-color: white;
-    color: #000000;
+    
 
 
 }
 
+.schrift:hover{
+   color: #000000;
+}
 
+.Hoverme {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000000;
+    font-size: 44pt;
+}
 
