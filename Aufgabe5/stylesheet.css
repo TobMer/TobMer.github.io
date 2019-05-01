@@ -281,7 +281,7 @@ p{
 
     font-family: 'Courier New', Courier, monospace;
     font-weight: 100;
-    color:#FFFACD;
+    color: #FF0000;
     padding:10pt;
 }
 
@@ -292,6 +292,7 @@ p{
     padding-left: 10px;
     height:1500px;
 margin-bottom:50pt;
+position: relative;
     }
 
 
@@ -301,25 +302,32 @@ aside {
    width: 15%;
    height: 1500px; 
    padding-left: 20px;
-
-
-   
+   position: relative; 
 }
 
 aside p:hover
-{background-color: white;
+{background-color: #000000;
+   
+    transition: all ease 1.5s;
     
 
+	
+      	margin: 6pt;
+      	max-width: 1000px;
+        border-radius: 10pt;
 
 }
+
 
 .schrift:hover{
-   color: #000000;
+   color: #FFF;
 }
+
 
 .Hoverme {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #000000;
+    color: #FF0000;
     font-size: 44pt;
+ 
 }
 
