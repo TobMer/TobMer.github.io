@@ -266,7 +266,7 @@ section{
     
 }
 
-footer{
+footer {
 clear: both;
 background-color: #87ceeb;
 border-top: 30px solid #000000;
@@ -341,5 +341,8 @@ float:left;
 
 .logo{
 
-    width:200px;
+  
+    
+padding-left: 1em;
+width:90%;
 }
