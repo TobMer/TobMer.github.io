@@ -333,16 +333,23 @@ float:left;
  
 }
 
+
+.logo{
+
+padding: 4em;
+   width: 30px;
+   margin-left: 1em;
+   margin-right: 1em;
+   margin-top: 1em;
+}
+
+
+
+
+
 .wrapper :nth-child(3n+1)
 {
 
     clear:left;
 }
 
-.logo{
-
-  
-    
-padding-left: 1em;
-width:90%;
-}
