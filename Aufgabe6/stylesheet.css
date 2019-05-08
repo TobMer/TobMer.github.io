@@ -1,0 +1,348 @@
+/* Css Datei für die Homepage */
+
+body {
+    background-color: #FFFFE0;
+    margin-left: 10 px;
+}
+
+
+
+header{             /* header HIntergrundfarbe*/
+
+  
+    background-color: #FFFACD;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+ul{/* Header*/
+margin: 0;
+padding: 2px;
+overflow: hidden;
+display: block;
+
+margin-block-start: 5em;
+margin-block-end: 5em;
+margin-inline-start: 100px;
+margin-inline-end: 43px;
+padding-inline-start: 200px;
+
+
+}
+
+li ,  .artikel{
+display: block;
+    
+    text-align: center;
+    padding: 14px 8%;
+    text-decoration: underline;
+}
+
+
+
+li{
+    float: left;
+    }
+    
+
+.artikel{ /* Stern Artikel hat einen Strich und ist blau */
+
+    font-family:cursive;
+    color: -webkit-link;
+    cursor: pointer;
+    
+}
+
+
+  /* Überschrift */
+  h1 	{color: #008000;
+  text-shadow: 1px 1px blue, 2px 2px blue, 3px 3px blue;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-out;
+  font-size: 50px;
+  margin-left: 7em;
+  margin-bottom: 1em;
+}
+
+h1:hover {
+  position: relative;
+  top: -3px;
+  left: -3px;
+  text-shadow: 1px 1px blue, 2px 2px blue, 3px 3px blue, 4px 4px blue, 5px 5px blue, 6px 6px blue;
+}
+
+
+ .sweetdog{
+
+    margin-right: 4em;;
+     margin-left: 7em;
+  margin-bottom: 1em;
+    width: 50%;
+   
+ 
+    
+
+
+    display: inline-block;
+
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #DEB887;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+ margin-right: 5pt;
+ margin-left: 210pt;
+ padding: 10pt ;
+ margin-bottom: 20pt;
+
+}
+
+button{
+
+    
+    display: inline-block;
+
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #008000;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+ margin-right: 115pt;
+ margin-left: 440pt;
+ padding: 10pt ;
+ margin-bottom: 30pt;
+ margin-top: 30pt;
+    
+
+}
+
+
+.klick{
+    float:left;
+    
+}
+
+
+
+
+
+
+button:hover{             /* Button verfärbt sich beim rübergehen*/
+    color: #000000;
+}
+
+
+
+li{                 /* Listenelement*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+ }
+
+ article {
+
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Marker Feh", "Comic Sans MS", fantasy;
+    padding:10pt;
+}
+
+header{             /* header HIntergrundfarbe*/
+    float: middle;
+    clear: left;
+    background-color: #FFFACD;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.anfang{                    /* Dies ist der Section Tag aber nur extra benannt */
+
+    background-color: #d2b48c;
+    font-family: 'Courier New', Courier, monospace;
+
+    width:25%;
+    float:left;
+   
+}
+
+
+
+h2, article{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin-right: 10pt;
+    margin-left: 10pt;
+    padding: 10pt ;
+    margin-bottom: 10pt;
+    margin-top:10pt;
+}
+
+.schnauzerhund{             /* Macht das Bild rund */
+
+    border: white;
+    margin: 10px;
+    border-radius: 60%; 
+    order: white;
+
+    
+    margin-top: 10pt;
+    margin-left: 20pt;
+    margin-right: 10pt;
+    margin-bottom: 50pt;
+ 
+    
+    width: 200px;
+}
+
+.boxerhund{             /* Bild Boxer */
+    border: white;
+    margin: 10px;
+    border-radius: 60%;
+    margin-top: 10pt;
+    margin-left: 5pt;
+    margin-right: 10pt;
+    margin-bottom: 10pt;
+padding: 10pt;
+    
+    width:200px;
+}
+
+.lol{                   /* Section zum Boxerwelpen*/
+
+    background-color: #FFDEAD;
+    
+    text-align: center;
+    width: 25%;
+  
+    float:left; /* Befehl dass ein Container an nächster Stelle sich links befindet*/
+    
+}
+
+
+.labr{                  /* Section zum Labradorwelpen*/
+background-color: #eec200;
+text-align: center;
+width: 25%;
+float:left;
+}
+
+.dogl{              /* Bild von Labradorwelpen*/
+
+    border: white;
+    margin: 10px;
+    border-radius: 60%;
+    margin-top: 10pt;
+    margin-left: 10pt;
+    margin-right: 10pt;
+    margin-bottom: 10pt;
+  
+    width:180px;
+}
+
+
+section{
+
+    width: 15%;
+    height: 30em;
+    float: left;
+    margin: 1%;
+    overflow: auto;
+    clear: none;
+    
+}
+
+footer {
+clear: both;
+background-color: #87ceeb;
+border-top: 30px solid #000000;
+text-align: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+border-bottom: 30px solid #000000; 
+margin-bottom: 10pt;
+margin-top:100pt;
+}
+
+p{
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    color: #FF0000;
+    padding:10pt;
+}
+
+.wrapper {
+
+    width: 70%;
+    float: left;
+    padding-left: 10px;
+    height:1500px;
+margin-bottom:50pt;
+position: relative;
+
+    }
+
+
+aside { 
+    
+    float: left;
+   width: 15%;
+   height: 1500px; 
+   padding-left: 20px;
+   position: relative; 
+}
+
+aside p:hover
+{background-color: #000000;
+   
+    transition: all ease 1.5s;
+    
+
+	
+      	margin: 6pt;
+      	max-width: 1000px;
+        border-radius: 10pt;
+width:300px;
+float:left;
+}
+
+
+.schrift:hover{
+   color: #FFF;
+}
+
+
+.Hoverme {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #FF0000;
+    font-size: 44pt;
+ 
+}
+
+.wrapper :nth-child(3n+1)
+{
+
+    clear:left;
+}
+
+.logo{
+
+  
+    
+padding-left: 1em;
+width:90%;
+}
