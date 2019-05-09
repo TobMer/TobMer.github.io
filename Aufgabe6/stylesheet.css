@@ -1,5 +1,14 @@
-/* Css Datei für die Homepage */
 
+/* Mobile First*/
+@media screen {min-width: 36em}
+
+ 
+header::after {
+    content:"-Node: Smartphone Landscape und größer";
+
+}
+
+/* Css Datei für die Homepage */
 body {
     background-color: #FFFFE0;
     margin-left: 10 px;
@@ -321,9 +330,15 @@ float:left;
 }
 
 
+
+
+
+
 .schrift:hover{
    color: #FFF;
 }
+
+
 
 
 .Hoverme {
@@ -333,16 +348,93 @@ float:left;
  
 }
 
+
+
 .wrapper :nth-child(3n+1)
 {
 
     clear:left;
 }
 
-.logo{
 
+
+
+
+
+/* AB HIER BURGER MENU*//* AB HIER BURGER MENU*//* AB HIER BURGER MENU*//* AB HIER BURGER MENU*/
+
+#logo{/* Mein Logo und nav*/
+    position: fixed;
+    height:auto;
+    width: 110px;
+    margin-left: 20pt;
   
-    
-padding-left: 1em;
-width:90%;
+    padding:10px;
+    font-size: 200px;
 }
+
+
+nav > ul{
+
+    border:1px solid #222;
+    left:-80px;
+    margin-left:10pt;
+    position: absolute;
+    top: 45px;
+    transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+}
+
+
+
+ul  {/* Die Liste*/
+
+    position:fixed;
+    display:none;
+    width: 300px;
+    top:100px;
+    text-decoration: underline;
+    list-style:none;
+    font-size:100%;
+    list-style:none;
+ }
+ 
+ 
+nav > .h, a#nav:target{
+    
+    display:none;}
+
+}
+
+
+a:target ~ ul,
+a:target ~ .k{
+    display: inline-block;
+}
+
+a:target ~ ul {
+    left: 0;
+}
+ 
+ li{/* Unterkategorien der LIste*/
+ padding:10px;
+ padding:left;
+ display: block;
+ background-color: #FF0000;
+ color:#008000;
+ }
+ 
+ a{
+     text-decoration:none;
+     color:black;
+ }
+ 
+ #logo:hover+ul{
+     display:block;
+ }
+ 
+ ul:hover{
+     display:block;
+ }
+
+
