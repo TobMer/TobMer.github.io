@@ -30,9 +30,9 @@ z-index:100;
 }
 
 ul:hover{
-transition:
-height:20em;
-    
+    transition: all 0.3s ease-out;
+height:18em;
+background-color: #008000;
 }
 
 
@@ -395,9 +395,9 @@ float:left;
     }
 
     
+
+
 }
-
-
 
 
 
@@ -453,14 +453,14 @@ float:left;
     position:relative;
 }
 
-}
+
 
 
 
 
 footer{
     width:100%;
-  position:fixed;
+  position:relative;
 }
 
 
