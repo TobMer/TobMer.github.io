@@ -1,17 +1,9 @@
 
-/* Mobile First*/
-@media screen {min-width: 36em}
-
- 
-header::after {
-    content:"-Node: Smartphone Landscape und größer";
-
-}
 
 /* Css Datei für die Homepage */
 body {
     background-color: #FFFFE0;
-    margin-left: 10 px;
+    margin-left: 10px;
 }
 
 
@@ -29,31 +21,53 @@ ul{/* Header*/
 margin: 0;
 padding: 2px;
 overflow: hidden;
-display: block;
 
-margin-block-start: 5em;
-margin-block-end: 5em;
-margin-inline-start: 100px;
-margin-inline-end: 43px;
-padding-inline-start: 200px;
+height:4em;
+
+position: fixed;
+z-index:100;
+
+}
+
+ul:hover{
+transition:
+height:20em;
+    
+}
 
 
+
+.klick{
+    font-family:cursive;
+    color: -webkit-link;
+    cursor: pointer;
 }
 
 li ,  .artikel{
-display: block;
-    
-    text-align: center;
-    padding: 14px 8%;
-    text-decoration: underline;
+
+text-align: center;
+   
+text-decoration: underline;
+
 }
 
 
 
-li{
-    float: left;
-    }
-    
+
+
+
+#contact{ /* springt zum footer */
+    font-family:cursive;
+    color: -webkit-link;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
 
 .artikel{ /* Stern Artikel hat einen Strich und ist blau */
 
@@ -110,7 +124,7 @@ h1:hover {
  margin-left: 210pt;
  padding: 10pt ;
  margin-bottom: 20pt;
-
+ 
 }
 
 button{
@@ -140,7 +154,7 @@ button{
 
 .klick{
     float:left;
-    
+   
 }
 
 
@@ -216,6 +230,8 @@ h2, article{
  
     
     width: 200px;
+
+
 }
 
 .boxerhund{             /* Bild Boxer */
@@ -361,80 +377,91 @@ float:left;
 
 
 
-/* AB HIER BURGER MENU*//* AB HIER BURGER MENU*//* AB HIER BURGER MENU*//* AB HIER BURGER MENU*/
-
-#logo{/* Mein Logo und nav*/
-    position: fixed;
-    height:auto;
-    width: 110px;
-    margin-left: 20pt;
-  
-    padding:10px;
-    font-size: 200px;
-}
-
-
-nav > ul{
-
-    border:1px solid #222;
-    left:-80px;
-    margin-left:10pt;
-    position: absolute;
-    top: 45px;
-    transition:all .3s ease;
-    -webkit-transition:all .3s ease;
-}
+/* AB HIER Tablet*/
 
 
 
-ul  {/* Die Liste*/
 
-    position:fixed;
-    display:none;
-    width: 300px;
-    top:100px;
-    text-decoration: underline;
-    list-style:none;
-    font-size:100%;
-    list-style:none;
- }
- 
- 
-nav > .h, a#nav:target{
+
+
+
+@media  screen and (max-width: 900px)
+{
+
+
+    body {
+        background-color: #FF0000;
+        margin-left: 10px;
+    }
+
     
-    display:none;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* smartphone*/
+@media  screen and (max-width: 600px)
+{
+
+
+    body {
+        background-color: #008000;
+        margin-left: 10px;
+    }
+
+    h1{
+        float:left;
+        width:45%;
+       
+    }
+
+.sweetdog{
+
+    width:100%;
+}
+
+
+
+
+
+.anfang{
+
+    width:50%;
+    position:absolute;
+}
+
+.lol{
+
+    width:50%;
+    position:relative;
+}
+
+.labr{
+
+    width:50%;
+    position:relative;
+}
 
 }
 
 
-a:target ~ ul,
-a:target ~ .k{
-    display: inline-block;
+
+
+footer{
+    width:100%;
+  position:fixed;
 }
 
-a:target ~ ul {
-    left: 0;
+
 }
- 
- li{/* Unterkategorien der LIste*/
- padding:10px;
- padding:left;
- display: block;
- background-color: #FF0000;
- color:#008000;
- }
- 
- a{
-     text-decoration:none;
-     color:black;
- }
- 
- #logo:hover+ul{
-     display:block;
- }
- 
- ul:hover{
-     display:block;
- }
-
-
