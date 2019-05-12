@@ -506,10 +506,19 @@ position: sticky;
       }
 
 
-     
+      nav
+      {
+        
+        
+        margin-left:30%;
+        text-align: center;
+        line-height: 2em;
+        float:left;}
+          
 .wrapper{
 
     width:100%;
+    clear:left;
 }
 
 .sweetdog{
