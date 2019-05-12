@@ -2,12 +2,185 @@
 
 
 
+/*Ab hier SMARTPHONE*/
+
+
+
+    body {
+        background-color: white;
+        margin-left: 10px;
+        }
 
 
 
 
 
-/* Css Datei für die Homepage */
+    h1{
+        float:left;
+        width:100%;
+        margin-left:0;
+        margin-right: 0;
+        text-align: center;
+      }
+
+
+     
+.wrapper{
+
+    width:100%;
+}
+
+.sweetdog{
+
+    width:100%;
+    margin-left:0;
+}
+
+
+
+.klick{
+    width:100%;
+}
+
+button{
+
+    margin-left:70pt;
+}
+
+aside{
+
+    display:none;
+}
+
+.anfang{
+
+    width:100%;
+    position:absolute;
+}
+
+.lol{
+
+    width:100%;
+    position:relative;
+}
+
+.labr{
+
+    width:100%;
+    position:relative;
+}
+
+
+
+
+
+
+footer{
+    width:100%;
+position: sticky;
+}
+
+
+}
+
+
+
+
+
+/* AB HIER Tablet*/
+
+
+@media (min-width: 62em)
+{
+
+
+    body {
+        background-color: #000000;
+        margin-left: 10px;
+    }
+
+    
+    h1{
+        float:left;
+        width:90%; 
+        margin-left:63pt;
+      }
+
+
+
+.sweetdog{
+    width:95%;
+    margin-left:11pt;
+}
+
+
+
+.klick{
+    width:80%;
+  
+}
+
+button{
+    margin-left:0pt;
+    width:80%;
+}
+
+
+
+
+.anfang{
+
+    width:80%;
+    position:absolute;
+}
+
+.lol{
+
+    width:80%;
+    position:relative;
+}
+
+.labr{
+
+    width:80%;
+    position:relative;
+}
+
+
+
+
+aside{
+width:20%;
+margin-left:0pt;
+}
+
+
+footer{
+    width:100%;
+position: sticky;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP ANSICHT *//* Css Datei für die Homepage */
+
+
+@media (min-width: 90em)
+{
+
 body {
     background-color: #FFFFE0;
     margin-left: 10px;
@@ -394,174 +567,4 @@ float:left;
 
 
 
-/* AB HIER Tablet*/
-
-
-@media  screen and (max-width: 900px)
-{
-
-
-    body {
-        background-color: #000000;
-        margin-left: 10px;
-    }
-
-    
-    h1{
-        float:left;
-        width:90%; 
-        margin-left:63pt;
-      }
-
-
-
-.sweetdog{
-    width:95%;
-    margin-left:11pt;
-}
-
-
-
-.klick{
-    width:80%;
-  
-}
-
-button{
-    margin-left:0pt;
-    width:80%;
-}
-
-
-
-
-.anfang{
-
-    width:80%;
-    position:absolute;
-}
-
-.lol{
-
-    width:80%;
-    position:relative;
-}
-
-.labr{
-
-    width:80%;
-    position:relative;
-}
-
-
-
-
-aside{
-width:20%;
-margin-left:0pt;
-}
-
-
-footer{
-    width:100%;
-position: sticky;
-}
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Ab hier SMARTPHONE*/
-@media  screen and (max-width: 620px)
-{
-
-    body {
-        background-color: white;
-        margin-left: 10px;
-        }
-
-
-
-
-
-    h1{
-        float:left;
-        width:100%;
-        margin-left:0;
-        margin-right: 0;
-        text-align: center;
-      }
-
-
-     
-.wrapper{
-
-    width:100%;
-}
-
-.sweetdog{
-
-    width:100%;
-    margin-left:0;
-}
-
-
-
-.klick{
-    width:100%;
-}
-
-button{
-
-    margin-left:70pt;
-}
-
-aside{
-
-    display:none;
-}
-
-.anfang{
-
-    width:100%;
-    position:absolute;
-}
-
-.lol{
-
-    width:100%;
-    position:relative;
-}
-
-.labr{
-
-    width:100%;
-    position:relative;
-}
-
-
-
-
-
-
-footer{
-    width:100%;
-position: sticky;
-}
-
-
-}
 
