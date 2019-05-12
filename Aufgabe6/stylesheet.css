@@ -487,15 +487,19 @@ position: sticky;
 {
 
     body {
+
         background-color: white;
         margin-left: 10px;
-        }
+       
+    }
 
 
 
-        Main > div.Box:nth-child(4n+2) {
+        Main > div.Box:nth-child(4n+2)
+         {
             Clear: left;
             }
+
 
     h1{
         float:left;
@@ -513,7 +517,8 @@ position: sticky;
         margin-left:30%;
         text-align: center;
         line-height: 2em;
-        float:left;}
+        float:left;
+    }
           
 .wrapper{
 
@@ -560,9 +565,6 @@ aside{
     width:100%;
     position:relative;
 }
-
-
-
 
 
 
