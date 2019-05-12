@@ -22,7 +22,7 @@ margin: 0;
 padding: 2px;
 overflow: hidden;
 
-height:4em;
+height:5em;
 
 position: fixed;
 z-index:100;
@@ -300,6 +300,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 border-bottom: 30px solid #000000; 
 margin-bottom: 10pt;
 margin-top:100pt;
+position: sticky;
 }
 
 p{
@@ -315,7 +316,7 @@ p{
     width: 70%;
     float: left;
     padding-left: 10px;
-    height:1500px;
+    
 margin-bottom:50pt;
 position: relative;
 
@@ -329,6 +330,10 @@ aside {
    height: 1500px; 
    padding-left: 20px;
    position: relative; 
+}
+
+.spacer{
+    width:100%;
 }
 
 aside p:hover
@@ -380,76 +385,155 @@ float:left;
 /* AB HIER Tablet*/
 
 
-
-
-
-
-
 @media  screen and (max-width: 900px)
 {
 
 
     body {
-        background-color: #FF0000;
+        background-color: #000000;
         margin-left: 10px;
     }
 
     
+    h1{
+        float:left;
+        width:90%; 
+        margin-left:63pt;
+      }
 
 
+
+.sweetdog{
+    width:95%;
+    margin-left:11pt;
 }
 
 
 
+.klick{
+    width:80%;
+}
 
-
-
-
-
-
-
-
-
-/* smartphone*/
-@media  screen and (max-width: 600px)
-{
-
-
-    body {
-        background-color: #008000;
-        margin-left: 10px;
-    }
-
-    h1{
-        float:left;
-        width:45%;
-       
-    }
-
-.sweetdog{
-
+button{
+    margin-left:100pt;
     width:100%;
 }
 
 
 
 
-
 .anfang{
 
-    width:50%;
+    width:80%;
     position:absolute;
 }
 
 .lol{
 
-    width:50%;
+    width:80%;
     position:relative;
 }
 
 .labr{
 
-    width:50%;
+    width:80%;
+    position:relative;
+}
+
+
+
+
+aside{
+width:20%;
+margin-left:0pt;
+}
+
+
+footer{
+    width:100%;
+position: sticky;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SMARTPHONE*/
+@media  screen and (max-width: 600px)
+{
+
+    body {
+        background-color: white;
+        margin-left: 10px;
+        }
+
+
+
+
+
+    h1{
+        float:left;
+        width:100%;
+        margin-left:0;
+        margin-right: 0;
+      }
+
+
+.wrapper{
+
+    width:100%;
+}
+
+.sweetdog{
+
+    width:100%;
+    margin-left:0;
+}
+
+
+
+.klick{
+    width:100%;
+}
+
+button{
+
+    margin-left:70pt;
+}
+
+aside{
+
+    display:none;
+}
+
+.anfang{
+
+    width:100%;
+    position:absolute;
+}
+
+.lol{
+
+    width:100%;
+    position:relative;
+}
+
+.labr{
+
+    width:100%;
     position:relative;
 }
 
@@ -460,7 +544,7 @@ float:left;
 
 footer{
     width:100%;
-  position:relative;
+position: sticky;
 }
 
 
