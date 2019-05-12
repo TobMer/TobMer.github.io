@@ -5,6 +5,8 @@
 
 
 
+
+
 /* Css Datei für die Homepage */
 body {
     background-color: #FFFFE0;
@@ -15,11 +17,11 @@ body {
 
 header{             /* header HIntergrundfarbe*/
 
-  
+    width: 100%;
     background-color: #FFFACD;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    
 }
 
 ul{/* Header*/
@@ -30,7 +32,7 @@ overflow: hidden;
 height:5em;
 
 position: fixed;
-z-index:100;
+z-index:1000;
 
 }
 
@@ -482,7 +484,7 @@ position: sticky;
 
 
 
-/* SMARTPHONE*/
+/*Ab hier SMARTPHONE*/
 @media  screen and (max-width: 620px)
 {
 
