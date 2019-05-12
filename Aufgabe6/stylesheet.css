@@ -525,15 +525,7 @@ position: sticky;
     width:100%;
     clear:left;
 
-    width: 62em;
-  height: 32em;
-  border: 1px solid white;
-  margin:1em;
-  padding: 0em;
-  float: left;
-  clear:left;
-  white-space:nowrap;
-  overflow: hidden;
+    
 }
 
 .sweetdog{
