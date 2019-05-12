@@ -471,7 +471,7 @@ position: sticky;
 
 
 /* SMARTPHONE*/
-@media  screen and (max-width: 300px)
+@media  screen and (max-width: 620px)
 {
 
     body {
