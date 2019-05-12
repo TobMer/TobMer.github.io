@@ -20,13 +20,15 @@ header{             /* header HIntergrundfarbe*/
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    clear:left;
+    margin-bottom:2em;
 }
 
 ul{/* Header*/
 margin: 0;
 padding: 2px;
 overflow: hidden;
-
+width:100%;
 height:5em;
 
 position: fixed;
@@ -387,6 +389,13 @@ float:left;
 
 
 
+
+
+
+
+
+
+
 /* AB HIER Tablet*/
 
 
@@ -461,6 +470,12 @@ position: sticky;
 
 
 }
+
+
+
+
+
+
 
 
 
@@ -550,9 +565,3 @@ position: sticky;
 
 
 }
-
-
-
-
-
-
