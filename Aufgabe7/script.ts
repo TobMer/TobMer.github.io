@@ -26,7 +26,7 @@ var surname = "merkle";
     console.log(number1 );
   
 
-    var _boolean = true; // kann nur true oder false sein.
+    
     
    
 

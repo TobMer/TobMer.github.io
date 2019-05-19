@@ -13,7 +13,6 @@ window.onload = function () {
     number1 = number2 + number3 + number2; //Addiert und neue Wertzwueisung
     console.log(name + surname);
     console.log(number1);
-    var _boolean = true; // kann nur true oder false sein.
     document.getElementById("anfang").innerHTML; //Greift auf HTML ID zu
 };
 //# sourceMappingURL=script.js.map
