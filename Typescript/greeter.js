@@ -2,8 +2,8 @@ console.log('Dokument ist vermutlich noch nicht geladen');
 window.onload = function () {
     console.log('Dokument ist geladen');
     document.getElementById("demo").addEventListener("click", changeStuff);
-    // console.log(document.getElementById("demo"));
-    // console.log("Konsolenausgabe 2: " + document.body.getElementsByClassName("class1"));
+ console.log(document.getElementById("demo"));
+console.log("Konsolenausgabe 2: " + document.body.getElementsByClassName("class1"));
 };
 function changeStuff() {
     // Variablen-Deklaration
