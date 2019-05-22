@@ -57,7 +57,7 @@ window.alert("Button geklickt?!");//Das löst eine Meldung aus
 
 window.onclick = function () {
 
-    function onClick() { document.getElementById('button2').innerHTML = "BlaBlaBla"; }
+    function onclick() { document.getElementById('button2').innerHTML = "BlaBlaBla"; }
 }
 
 
