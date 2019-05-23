@@ -1,6 +1,6 @@
 window.onload = function () {  //Lässt in Konsole Text erscheinen
 
-    document.getElementById("button2").addEventListener("click", Changeclass);
+    document.getElementById("button2").addEventListener("click", Changeclass);//Button 2 änder KLasse!
 
     console.log("Objekte wurden geladen");//Text in Konsole
     let name: string = "tobias"; //Typ String
@@ -15,7 +15,7 @@ window.onload = function () {  //Lässt in Konsole Text erscheinen
     console.log(number1 + number1);//Zahl in konsole
     number1 = number2 + number3 + number2;//Addiert und neue Wertzwueisung
 
-    console.log(name + surname);
+    console.log(name + surname);//Ausgabe
     console.log(number1);
 
 
@@ -28,22 +28,30 @@ window.onload = function () {  //Lässt in Konsole Text erscheinen
     console.log('Test1'); //Text in Konsole
     //Javascript und Typescript geht los
 
-    document.getElementById("button2").addEventListener("click", changehund)
-    document.getElementById("button3").addEventListener("click", changecat)
-    document.getElementById("button4").addEventListener("click", changeplace)
+    document.getElementById("button2").addEventListener("click", changehund)//Button2 Zuweisung
+    document.getElementById("button3").addEventListener("click", changecat)//Button3 Zuweisung
+    document.getElementById("button4").addEventListener("click", changeplace)//Button4 Zuweisung
 };
 
-function changehund() {//Button2
+
+
+function changehund()   //Button2
+{
+  
     document.getElementById("button2").innerHTML = "Tobias";
 
 }
 
-function changecat() {//Button 3
+function changecat() //Button 3
+
+{
     document.getElementById("button3").innerHTML = "Merkle";
 
 }
 
-function changeplace() {//Button 4
+
+function changeplace() //Button 4
+{
     document.getElementById("button4").innerHTML = "Furtwangen";
 
 }
@@ -61,7 +69,7 @@ window.onclick = function () {
 }
 
 
-function Changeclass() {
+function Changeclass() {//Funktion wenn sich KLasse ändert
 
     document.getElementById("button2").className = "class2";
 
