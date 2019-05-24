@@ -16,16 +16,13 @@ window.onload = function () {
     //Javascript und Typescript geht los
     document.getElementById("button2").addEventListener("click", changehund); //Button2 Zuweisung
     document.getElementById("button3").addEventListener("click", changecat); //Button3 Zuweisung
-    document.getElementById("button4").addEventListener("click", changeplace); //Button4 Zuweisung
+    document.getElementById("button4").addEventListener("click", para); //Button4 Zuweisung
 };
 function changehund() {
     document.getElementById("button2").innerHTML = "Tobias";
 }
 function changecat() {
-    document.getElementById("button3").innerHTML = "Merkle";
-}
-function changeplace() {
-    document.getElementById("button4").innerHTML = "Furtwangen";
+    document.getElementById("button3").innerHTML = "M.";
 }
 window.alert("Button geklickt?!"); //Das löst eine Meldung aus
 window.onclick = function () {
@@ -34,5 +31,13 @@ window.onclick = function () {
 function Changeclass() {
     document.getElementById("button2").className = "class2";
     console.log("wasgeht");
+}
+function para() {
+    document.getElementById("button4").innerHTML = "Furtwangen";
+    let newPara = document.createElement("p");
+    let position = document.getElementById("body");
+    position.appendChild(newPara);
+    newPara.innerHTML = "geschafft!";
+    console.log("Wundervoll!");
 }
 //# sourceMappingURL=script.js.map

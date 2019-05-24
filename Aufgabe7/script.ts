@@ -30,7 +30,7 @@ window.onload = function () {  //Lässt in Konsole Text erscheinen
 
     document.getElementById("button2").addEventListener("click", changehund)//Button2 Zuweisung
     document.getElementById("button3").addEventListener("click", changecat)//Button3 Zuweisung
-    document.getElementById("button4").addEventListener("click", changeplace)//Button4 Zuweisung
+    document.getElementById("button4").addEventListener("click", para)//Button4 Zuweisung
 };
 
 
@@ -45,16 +45,12 @@ function changehund()   //Button2
 function changecat() //Button 3
 
 {
-    document.getElementById("button3").innerHTML = "Merkle";
+    document.getElementById("button3").innerHTML = "M.";
 
 }
 
 
-function changeplace() //Button 4
-{
-    document.getElementById("button4").innerHTML = "Furtwangen";
 
-}
 
 
 
@@ -76,4 +72,15 @@ function Changeclass() {//Funktion wenn sich KLasse ändert
     console.log("wasgeht");
 }
 
+
+function para (){
+
+document.getElementById("button4").innerHTML = "Furtwangen";
+let newPara = document.createElement("p");
+let position = document.getElementById("body");
+position.appendChild(newPara);
+newPara.innerHTML="geschafft!";
+console.log("Wundervoll!");
+
+}
 
