@@ -14,7 +14,7 @@ window.onload = function () {
     document.getElementById("button2").addEventListener("click", changehund); //Button2 Zuweisung
     document.getElementById("button3").addEventListener("click", changecat); //Button3 Zuweisung
     document.getElementById("button4").addEventListener("click", para); //Button4 Zuweisung
-    document.getElementById("gameboy").addEventListener("click", gameb);
+    document.getElementById("gameboy").addEventListener("click", gameb); //Bild mit Gameboy Funktion
 };
 //Hier kommen die Funktionen:
 window.alert("Button geklickt?!"); //Das löst eine Meldung aus
