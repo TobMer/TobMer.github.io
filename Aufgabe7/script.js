@@ -11,23 +11,23 @@ window.onload = function () {
     number1 = number2 + number3 + number2; //Addiert und neue Wertzwueisung
     console.log(name + surname); //Ausgabe
     console.log(number1);
-    document.getElementById("anfang").innerHTML; //Greift auf HTML ID zu
-    console.log('Test1'); //Text in Konsole
-    //Javascript und Typescript geht los
     document.getElementById("button2").addEventListener("click", changehund); //Button2 Zuweisung
     document.getElementById("button3").addEventListener("click", changecat); //Button3 Zuweisung
     document.getElementById("button4").addEventListener("click", para); //Button4 Zuweisung
+    document.getElementById("gameboy").addEventListener("click", gameb);
 };
+//Hier kommen die Funktionen:
+window.alert("Button geklickt?!"); //Das löst eine Meldung aus
 function changehund() {
     document.getElementById("button2").innerHTML = "Tobias";
 }
 function changecat() {
     document.getElementById("button3").innerHTML = "M.";
 }
-window.alert("Button geklickt?!"); //Das löst eine Meldung aus
-window.onclick = function () {
-    function onclick() { document.getElementById('button2').innerHTML = "BlaBlaBla"; }
-};
+function gameb() {
+    document.getElementById("gameboy").innerHTML = "Bip-Bupp-Bip-Bip-Bubbb";
+    console.log("GameboyLanguage");
+}
 function Changeclass() {
     document.getElementById("button2").className = "class2";
     console.log("wasgeht");
