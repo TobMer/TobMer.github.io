@@ -1,0 +1,54 @@
+h1
+
+{
+
+    font-size: 50px;
+}
+
+
+main{
+
+width:69%;
+background-color: aqua;
+}
+
+
+
+aside{
+   width:30%;
+   float:right;
+   background-color: blueviolet;
+}
+
+#dropdown:hover .dropdown-content
+{
+    display: block;
+}
+
+#dropdown aside:hover
+{
+display: inline;
+}
+
+.dropdown-content
+{
+    display: none;
+
+}
+
+button{
+
+    background-color: black;
+}
+
+#bt1 button:hover
+{
+    background-color: blue;
+}
+
+#f1 button:hover
+
+{
+
+    background-color: white;
+}
