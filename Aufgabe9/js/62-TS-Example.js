@@ -12,24 +12,23 @@ let playerXP = 0; // Stellt die gesammelte Erfahrung des Spielers dar.
 let playerXPperLevel = 500; // Da es nur einen Spieler gibt, ergibt sich noch nicht viel Sinn darin, für den Spieler ein interface (im Sinne der Programmierung) zu erstellen.
 let playerItems = "Gabel"; //WAffe
 // Mehrere Arrays, welche jeweils Bauteile für Namen oder Eigenschaften der Monster beinhalten.
-let prefix = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Kniescheibenzertrümmernde(s) ", "zahnloses", "lactoseintolerantes", "Sandwichmachendes", "hüpfendes", "Fettspritzendes"]; // length = 6, da 6 Einträge. Von 0-5.
-let monsterName = ["Farfalle", "Markaki", "Ungeziefer", "Muchacho", "Torbat", "Dr.Chaos"]; // length = 3, da 3 Einträge. Von 0-2.
-let suffix = [" des Verderbens", " mit Rheuma", " der Redundanz", " der Zerberstung", " der Müdigkeit", " der Langeweile", " aus dem Keller", " aus Furtwangen"]; // length = 6, da hier 6 Einträge sind. Von 0-5.
+let prefix = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Kniescheibenzertrümmernde(s) ", "zahnloses", "lactoseintolerantes", "Sandwichmachendes", "hüpfendes", "Fettspritzendes"]; // length = 10, da 10 Einträge. Von 0-9.
+let monsterName = ["Farfalle", "Markaki", "Ungeziefer", "Muchacho", "Torbat", "Dr.Chaos"]; // length = 6, da 3 Einträge. Von 0-5.
+let suffix = [" des Verderbens", " mit Rheuma", " der Redundanz", " der Zerberstung", " der Müdigkeit", " der Langeweile", " aus dem Keller", " aus Furtwangen"]; // length = 10, da hier 10 Einträge sind. Von 0-9.
 let monsterModifers = ["Ist nervig", "Linkshänder", "Bier-Connoisseur", "checkt nix", "Prokrastiniert", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
 let Items = ["Stock", "Emmentaler", "Smartphone", "Sangria ", "Zahnstocher", "Handgranate", "Pantoffel", "Börek", "O-saft"];
 //Waffen der Monster
 //Bilderquellen
 let Bildquellen = ["bambi.png", "kaki.png", "taco.png", "nudel.png", "giphy.gif", "image.png"];
-//Array für Push
-let PushArray = [];
+let PushArray = []; //Array für Push
 // -- Initialisierung für viele/variable Anzahl an Monster --
 let monsterArray = []; // Das Haupt-Array wurde erstellt und initialisiert!
 console.log(monsterArray); // Gebe das Monster-Array einmal zu beginn aus. Es sollte leer sein.
 // ----------- Funktionen ----------- //
-// INSGESAMT EINGEBAUTE FEHLER bei den Funktionen: IIIII (5 / fünf)      xx
+// INSGESAMT EINGEBAUTE FEHLER bei den Funktionen: IIIII (5 / fünf)      x
 // Generelle onload-funktion um Event-Listener zum Dokument hinzuzufügen
 window.onload = function () {
-    document.getElementById("monsterSpawner").addEventListener("click", generateMonster, false);
+    document.getElementById("monsterSpawner").addEventListener("click", generateMonster, false); //Ein Event wird erstellt wenn man auf den bUtton klickt.
     updatePlayerLevel("none"); // Zu Anfang wird durch eine Funktion ein HTML-Element mit Inhalt befüllt.
     console.log("" + document.getElementById("monsterSpawner").innerHTML);
     document.getElementById("Arraypusher").addEventListener("click", pusher);
@@ -39,7 +38,8 @@ window.onload = function () {
 // Ruft eine Funktion auf, welche dann das entsprechende HTML erzeugt.
 function generateMonster() {
     let Random = getRNGNumber(3) + 1; //Diese Schleife lässt Monser bis zu 3 generieren und dann hört er auf
-    for (let i = 0; i < Random; i++) {
+    for (let i = 0; i < Random; i++) // FOR Schleife
+     {
         let newMonsterName = generateMonsterName(); // Eigens-gebaute Funktion, welche einen string zurück gibt.
         let newMonsterHP = generateMonsterHitPoints(); // Eigens-gebaute Funktion, welche eine Zahl zurück gibt.
         let newMonsterXP = generateMonsterXP(); // Eigens-gebaute Funktion, welche eine Zahl zurück gibt.

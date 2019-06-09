@@ -28,7 +28,7 @@ interface Monster {
     monsterHealthPoints : number; // Lebenspunkte
     monsterExperience : number; // Erfahrungspunkte bei besiegen des Monsters
     monsterModifier : string []; // Monster-Verstärker. Diese sind in diesem Fall nur Text! (Da hier einfacher Zufall für die Auswahl genutzt wird, kann der gleiche Eintrag auch doppelt vorkommen)
-    monsterItem :string;
+    monsterItem :string;// String für Monster Items
     Bildpfad : string;
     
 }
@@ -56,9 +56,9 @@ let playerXPperLevel : number = 500;               // Da es nur einen Spieler gi
 let playerItems: string = "Gabel";//WAffe
 
 // Mehrere Arrays, welche jeweils Bauteile für Namen oder Eigenschaften der Monster beinhalten.
-let prefix : string[] = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Kniescheibenzertrümmernde(s) ", "zahnloses", "lactoseintolerantes", "Sandwichmachendes", "hüpfendes" , "Fettspritzendes"]; // length = 6, da 6 Einträge. Von 0-5.
-let monsterName : string[] = ["Farfalle", "Markaki", "Ungeziefer", "Muchacho", "Torbat", "Dr.Chaos"]; // length = 3, da 3 Einträge. Von 0-2.
-let suffix : string[] = [" des Verderbens", " mit Rheuma", " der Redundanz", " der Zerberstung", " der Müdigkeit", " der Langeweile", " aus dem Keller", " aus Furtwangen"]; // length = 6, da hier 6 Einträge sind. Von 0-5.
+let prefix : string[] = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Kniescheibenzertrümmernde(s) ", "zahnloses", "lactoseintolerantes", "Sandwichmachendes", "hüpfendes" , "Fettspritzendes"]; // length = 10, da 10 Einträge. Von 0-9.
+let monsterName : string[] = ["Farfalle", "Markaki", "Ungeziefer", "Muchacho", "Torbat", "Dr.Chaos"]; // length = 6, da 3 Einträge. Von 0-5.
+let suffix : string[] = [" des Verderbens", " mit Rheuma", " der Redundanz", " der Zerberstung", " der Müdigkeit", " der Langeweile", " aus dem Keller", " aus Furtwangen"]; // length = 10, da hier 10 Einträge sind. Von 0-9.
 
 let monsterModifers : string[] = ["Ist nervig", "Linkshänder", "Bier-Connoisseur", "checkt nix", "Prokrastiniert", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
 
@@ -68,8 +68,8 @@ let Items: string[] = ["Stock", "Emmentaler", "Smartphone", "Sangria ", "Zahnsto
 
 //Bilderquellen
 let  Bildquellen: string [] = ["bambi.png", "kaki.png", "taco.png", "nudel.png", "giphy.gif", "image.png"]
-//Array für Push
-let PushArray: number[]=[];
+
+let PushArray: number[]=[];//Array für Push
 
 
 
@@ -87,11 +87,12 @@ console.log(monsterArray ); // Gebe das Monster-Array einmal zu beginn aus. Es s
 
 // ----------- Funktionen ----------- //
 
-// INSGESAMT EINGEBAUTE FEHLER bei den Funktionen: IIIII (5 / fünf)      xx
+// INSGESAMT EINGEBAUTE FEHLER bei den Funktionen: IIIII (5 / fünf)      x
 
 // Generelle onload-funktion um Event-Listener zum Dokument hinzuzufügen
+
 window.onload = function () {
-    document.getElementById("monsterSpawner").addEventListener("click", generateMonster, false);
+    document.getElementById("monsterSpawner").addEventListener("click", generateMonster, false); //Ein Event wird erstellt wenn man auf den bUtton klickt.
     updatePlayerLevel("none"); // Zu Anfang wird durch eine Funktion ein HTML-Element mit Inhalt befüllt.
     console.log("" + document.getElementById("monsterSpawner").innerHTML);                                   
     document.getElementById("Arraypusher").addEventListener("click", pusher)
@@ -111,7 +112,7 @@ function generateMonster()
 
 let Random : number = getRNGNumber(3)+1;//Diese Schleife lässt Monser bis zu 3 generieren und dann hört er auf
 
-for (let i : number = 0;  i < Random; i++)
+for (let i : number = 0;  i < Random; i++)// FOR Schleife
 {
 
     let newMonsterName : string = generateMonsterName();                // Eigens-gebaute Funktion, welche einen string zurück gibt.
