@@ -16,6 +16,7 @@ let prefix = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Knie
 let monsterName = ["Farfalle", "Markaki", "Ungeziefer", "Muchacho", "Torbat", "Dr.Chaos"]; // length = 6, da 3 Einträge. Von 0-5.
 let suffix = [" des Verderbens", " mit Rheuma", " der Redundanz", " der Zerberstung", " der Müdigkeit", " der Langeweile", " aus dem Keller", " aus Furtwangen"]; // length = 10, da hier 10 Einträge sind. Von 0-9.
 let monsterModifers = ["Ist nervig", "Linkshänder", "Bier-Connoisseur", "checkt nix", "Prokrastiniert", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
+let monsterort = ["Hyrule", "Kakariko", "Gerudo-Stamm", "Yharnam", "Lothric", "Queelags Sphäre"];
 let Items = ["Stock", "Emmentaler", "Smartphone", "Sangria ", "Zahnstocher", "Handgranate", "Pantoffel", "Börek", "O-saft"];
 //Waffen der Monster
 //Bilderquellen
@@ -46,6 +47,7 @@ function generateMonster() {
         let newMonsterModifier = generateMonsterModifer(); // Eigens-gebaute Funktion, welche ein string-Array zurück gibt.
         let newMonsterItem = generateMonsterItem();
         let newImageSource = saveImageSrc;
+        let newmonsterort = generatemonsterort();
         console.log("MonsterXP" + newMonsterXP);
         let newMonster = {
             monsterName: newMonsterName,
@@ -55,6 +57,7 @@ function generateMonster() {
             /*  monsterMoney : 0, Hier wurde keine Variable zugewiesen und kann daher nicht funktionieren*/
             monsterItem: newMonsterItem,
             Bildpfad: newImageSource,
+            monsterort: newmonsterort,
         };
         monsterArray.push(newMonster); // Monster wird erst in diesem Schritt zu dem Array hinzugefügt 
         console.log(monsterArray[monsterArray.length - 1].monsterExperience); // Man kann nur auf Array-Teile zugreifen, welche definiert sind. -1 ist nicht definitiert (und wird es auch nie sein).              
@@ -79,6 +82,10 @@ function monsterGenerateHTML(count) {
     let monsterName = document.createElement("p"); // Generiere einen <p>
     monsterName.innerHTML = monsterArray[count].monsterName; // Inhalt des <p>: Monster-Name des letzten Monsters im Array.
     holdingDiv.appendChild(monsterName);
+    //LEbensraum
+    let monsterort = document.createElement("p"); // Generiere einen <p>
+    monsterort.innerHTML = monsterArray[count].monsterort.toString(); // Inhalt des <p>: Monster-Name des letzten Monsters im Array.
+    holdingDiv.appendChild(monsterort);
     let monsterexphtml = document.createElement("p"); // Generiere Erfahrung
     monsterexphtml.innerHTML = "EXP: " + monsterArray[count].monsterExperience.toString(); // Inhalt des <p>: Monster-Name des letzten Monsters im Array.
     holdingDiv.appendChild(monsterexphtml);
@@ -170,6 +177,11 @@ function generateNewImageSource(MonsterName) {
     else {
         saveImageSrc = "imgs/error.png";
     }
+}
+function generatemonsterort() {
+    let orterstellen;
+    orterstellen = monsterort[getRNGNumber(monsterort.length)];
+    return orterstellen;
 }
 // Aufgerufen, wenn man auf den Button klickt.
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.

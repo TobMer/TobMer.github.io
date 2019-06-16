@@ -30,7 +30,7 @@ interface Monster {
     monsterModifier : string []; // Monster-Verstärker. Diese sind in diesem Fall nur Text! (Da hier einfacher Zufall für die Auswahl genutzt wird, kann der gleiche Eintrag auch doppelt vorkommen)
     monsterItem :string;// String für Monster Items
     Bildpfad : string;
-    
+    monsterort: string;
 }
 
 
@@ -61,7 +61,7 @@ let monsterName : string[] = ["Farfalle", "Markaki", "Ungeziefer", "Muchacho", "
 let suffix : string[] = [" des Verderbens", " mit Rheuma", " der Redundanz", " der Zerberstung", " der Müdigkeit", " der Langeweile", " aus dem Keller", " aus Furtwangen"]; // length = 10, da hier 10 Einträge sind. Von 0-9.
 
 let monsterModifers : string[] = ["Ist nervig", "Linkshänder", "Bier-Connoisseur", "checkt nix", "Prokrastiniert", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
-
+let monsterort : string [] = ["Hyrule", "Kakariko", "Gerudo-Stamm", "Yharnam", "Lothric", "Queelags Sphäre"];
 let Items: string[] = ["Stock", "Emmentaler", "Smartphone", "Sangria ", "Zahnstocher", "Handgranate", "Pantoffel", "Börek", "O-saft"];          
 //Waffen der Monster
 
@@ -122,7 +122,7 @@ for (let i : number = 0;  i < Random; i++)// FOR Schleife
 
     let newMonsterItem: string = generateMonsterItem();
     let newImageSource: string = saveImageSrc;
-
+    let newmonsterort: string = generatemonsterort();
     console.log("MonsterXP" + newMonsterXP);
 
 
@@ -134,7 +134,7 @@ for (let i : number = 0;  i < Random; i++)// FOR Schleife
       /*  monsterMoney : 0, Hier wurde keine Variable zugewiesen und kann daher nicht funktionieren*/ 
        monsterItem : newMonsterItem,
       Bildpfad: newImageSource,
-
+monsterort : newmonsterort,
 
  
    
@@ -180,6 +180,11 @@ function monsterGenerateHTML(count: number) {
     monsterName.innerHTML = monsterArray[count].monsterName;                     // Inhalt des <p>: Monster-Name des letzten Monsters im Array.
     holdingDiv.appendChild(monsterName);     
     
+    //LEbensraum
+    let monsterort: HTMLElement = document.createElement("p");        // Generiere einen <p>
+    monsterort.innerHTML = monsterArray[count].monsterort.toString();                     // Inhalt des <p>: Monster-Name des letzten Monsters im Array.
+    holdingDiv.appendChild(monsterort);  
+
     let monsterexphtml: HTMLElement = document.createElement("p");        // Generiere Erfahrung
     monsterexphtml.innerHTML = "EXP: " + monsterArray[count].monsterExperience.toString();                     // Inhalt des <p>: Monster-Name des letzten Monsters im Array.
     holdingDiv.appendChild(monsterexphtml); 
@@ -313,7 +318,12 @@ function generateNewImageSource(MonsterName: number) {
 
 }
 
+function generatemonsterort(): string {
+    let orterstellen: string;
+    orterstellen = monsterort[getRNGNumber(monsterort.length)];
 
+    return orterstellen;
+}
 
 
 
