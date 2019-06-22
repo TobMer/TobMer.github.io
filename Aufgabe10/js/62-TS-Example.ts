@@ -31,8 +31,6 @@ interface Monster {
     monsterItem: string;// String für Monster Items
     Bildpfad: string;
     monsterort: string;
-
-
     monsterlevel: number; //LEvel des Monsters
 }
 
@@ -52,7 +50,7 @@ let saveImageSrc: string;
 
 let monsterHolder: string = "monsterHoldingCell";                // ID für das Haupt-Element, in welchem die Monster sich befinden werden. Wird vielleicht mehrfach in dem Skript gebraucht, deshalb einmalig definitiert.
 
-let playerName: string = "Spielername";                         // Ein paar globale Variablen, welche den Spieler darstellen.
+let playerName: string = "Tobias";                         // Ein paar globale Variablen, welche den Spieler darstellen.
 let playerXP: number = 500 * 2;                                            // Stellt die gesammelte Erfahrung des Spielers dar.
 let playerXPperLevel: number = 500;               // Da es nur einen Spieler gibt, ergibt sich noch nicht viel Sinn darin, für den Spieler ein interface (im Sinne der Programmierung) zu erstellen.
 let playerlevel: number = 2;
@@ -96,7 +94,7 @@ console.log(monsterArray); // Gebe das Monster-Array einmal zu beginn aus. Es so
 
 window.onload = function () {
     document.getElementById("monsterSpawner").addEventListener("click", generateMonster, false); //Ein Event wird erstellt wenn man auf den bUtton klickt.
-    updatePlayerLevel(0,""); // Zu Anfang wird durch eine Funktion ein HTML-Element mit Inhalt befüllt.
+    updatePlayerLevel(0, ""); // Zu Anfang wird durch eine Funktion ein HTML-Element mit Inhalt befüllt.
     console.log("" + document.getElementById("monsterSpawner").innerHTML);
     document.getElementById("Arraypusher").addEventListener("click", pusher)
     document.getElementById("fightAllMonsters").addEventListener("click", fightAllMonsters);
@@ -340,24 +338,24 @@ function generatemonsterort(): string {
 function fightMonster(_index: number) {
 
 
-   if (monsterArray[_index].monsterlevel < playerlevel) {
+    if (monsterArray[_index].monsterlevel < playerlevel) {
 
         console.log(monsterArray[_index].monsterlevel + " wurde von dir besiegt");
         playerXP += monsterArray[_index].monsterExperience;                 	    // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
         updatePlayerLevel(monsterArray[_index].monsterlevel, monsterArray[_index].monsterItem);
-        
-    updatePlayerItems(monsterArray[_index].monsterItem);
-   
-    // removeMonsters(_index);
-    monsterArray.splice(_index, 1);
-    
+
+        updatePlayerItems(monsterArray[_index].monsterItem);
+
+        // removeMonsters(_index);
+        monsterArray.splice(_index, 1);
+
     }
     else {                                                                                    // Alternative für alle anderen Fälle
-        
+
         console.log(monsterArray[_index].monsterlevel + " Tja du hast verloren");
-        playerXP-=monsterArray[_index].monsterlevel;
+        playerXP -= monsterArray[_index].monsterlevel;
         updatePlayerLevel(monsterArray[_index].monsterlevel, monsterArray[_index].monsterItem);
-        
+
     }
 
     updateHTML();
@@ -481,15 +479,14 @@ function generatemonsterlevel(): number { //Berechnung von Monster Level
     return monsterlevel;
 }
 
-function fightAllMonsters()
-{
+function fightAllMonsters() {
 
     for (let i: number = 0; i < monsterArray.length; i++) // FOR Schleife
 
-   
+
     {
         fightMonster(i);
-   
+
     }
     console.log("Es wird gegen alle Monster gekämpft")
 }
@@ -499,15 +496,13 @@ function fightAllMonsters()
 
 
 
-function fightAllWeakMonster()
-{
+function fightAllWeakMonster() {
 
-for (let i= monsterArray.length -1; i >=0 ; i--)
+    for (let i = monsterArray.length - 1; i >= 0; i--)
 
-if ( monsterArray[i].monsterlevel < playerlevel)
-{
-   fightMonster(i);
-}
+        if (monsterArray[i].monsterlevel < playerlevel) {
+            fightMonster(i);
+        }
 
 
 }
@@ -519,7 +514,26 @@ if ( monsterArray[i].monsterlevel < playerlevel)
 
 
 
-function fightWeakestMonster():void
-{}
+function fightWeakestMonster() {  //Kämpfe gegen das schwächste Monster auf dem Feld
+
+ let _index: number= 0;
+ let findweakeastmonster : number = monsterArray[0].monsterlevel;
+ 
+for ( let i : number = monsterArray.length -1; i>= 0; i--)
+{
+
+console.log("for schleife wird ausgeführt, JUCHUU :D ");
+
+if (monsterArray [i].monsterlevel < findweakeastmonster)
+{
+    _index = i;
+    findweakeastmonster= monsterArray [i].monsterlevel;
+    console.log("IF IF IF IF");
+
+}
+}
+if (monsterArray [_index].monsterlevel < playerlevel)
+{fightMonster (_index);}
+}
 
 

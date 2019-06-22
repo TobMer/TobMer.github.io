@@ -7,7 +7,7 @@
 // INSGESAMT EINGEBAUTE FEHLER bei den Variablen: I (1 / einer)
 let saveImageSrc;
 let monsterHolder = "monsterHoldingCell"; // ID für das Haupt-Element, in welchem die Monster sich befinden werden. Wird vielleicht mehrfach in dem Skript gebraucht, deshalb einmalig definitiert.
-let playerName = "Spielername"; // Ein paar globale Variablen, welche den Spieler darstellen.
+let playerName = "Tobias"; // Ein paar globale Variablen, welche den Spieler darstellen.
 let playerXP = 500 * 2; // Stellt die gesammelte Erfahrung des Spielers dar.
 let playerXPperLevel = 500; // Da es nur einen Spieler gibt, ergibt sich noch nicht viel Sinn darin, für den Spieler ein interface (im Sinne der Programmierung) zu erstellen.
 let playerlevel = 2;
@@ -283,5 +283,19 @@ function fightAllWeakMonster() {
             fightMonster(i);
         }
 }
-function fightWeakestMonster() { }
+function fightWeakestMonster() {
+    let _index = 0;
+    let findweakeastmonster = monsterArray[0].monsterlevel;
+    for (let i = monsterArray.length - 1; i >= 0; i--) {
+        console.log("for schleife wird ausgeführt, JUCHUU :D ");
+        if (monsterArray[i].monsterlevel < findweakeastmonster) {
+            _index = i;
+            findweakeastmonster = monsterArray[i].monsterlevel;
+            console.log("IF IF IF IF");
+        }
+    }
+    if (monsterArray[_index].monsterlevel < playerlevel) {
+        fightMonster(_index);
+    }
+}
 //# sourceMappingURL=62-TS-Example.js.map
