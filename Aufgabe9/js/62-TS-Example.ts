@@ -331,6 +331,13 @@ function generatemonsterort(): string {
 // Aufgerufen, wenn man auf den Button klickt.
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.
 function fightMonster(_index: number) {
+    
+    if (monsterArray[_index].monsterlevel <= playerlevel ) {
+        /* if block statements */
+   } else { 
+       
+   }
+    
     console.log("Spieler kämpft gegen Monster und gewinnt!");                       // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
     console.log("Das Monster und alle Anderen Monster die sehen was passiert verschwinden");                       // Wird nächste Stunde erweitert.
     console.log("Du bekommst des Monsters ITEM! -> " + monsterArray[_index].monsterItem);
@@ -424,12 +431,6 @@ function updateHTML()
 
 
 
-
-
-
-
-
-
 function getMonsterCount(){
     //Gibt dem Rückgabewert der Monster Anzahl
 
@@ -452,8 +453,6 @@ function clearMonsterCell(){
     
     while(monsterHoldingCell.childElementCount > 0) {
         monsterHoldingCell.removeChild(monsterHoldingCell.firstChild);
-  
+
   }
-
-
 }

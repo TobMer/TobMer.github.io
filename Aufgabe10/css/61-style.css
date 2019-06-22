@@ -3,10 +3,15 @@
 @import url('https://fonts.googleapis.com/css?family=Courgette');
 
 /* Basic Styles */
+
 body {
 	font-size: 1.0em;
-	font-family: "Courgette", sans-serif;
+	font-family: "Trajan Pro", "sans-serif";/* Dark Souls Typo */
+	background-image: url("imageswater.jpg");
+	opacity: 1;
 }
+	
+
 
 button > img {
 	margin: 0.5em auto;
@@ -36,6 +41,7 @@ h1 {
 	display: block;
 	margin: auto;
 	background-color: #cc2e69;
+	
 }
 
 .monster p {
@@ -76,18 +82,20 @@ button {
   
   background-color: #C00;
   color: #ecf0f1;
-  
+ 
   margin: auto;
+  margin-left: 8em;
+  margin-bottom: 1em;
 	/*! text-align: center; */
   
   /*! float: left; */
-  margin-left: 680px;
+ margin-left: 20 px;
   margin-top: 20px;
 }
 
 #fightAllMonsters{
 	background-color: chartreuse;
-	
+	color:black;
 }
 
 #button-green {
@@ -108,4 +116,6 @@ footer a {
 	color: #ddd;
 	text-decoration: none;
 }
+
+
 
