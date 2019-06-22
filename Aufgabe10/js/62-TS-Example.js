@@ -21,7 +21,7 @@ let monsterort = ["Hyrule", "Kakariko", "Gerudo-Stamm", "Yharnam", "Lothric", "Q
 let Items = ["Stock", "Emmentaler", "Smartphone", "Sangria ", "Zahnstocher", "Handgranate", "Pantoffel", "Börek", "O-saft"];
 //Waffen der Monster
 //Bilderquellen
-let Bildquellen = ["bit.png", "falle.png", "komisch.png", "ritual.png", "giphy.gif", "image.png"];
+let Bildquellen = ["bit.png", "falle.png", "komisch.png", "ritual.png", "doggo.png", "image.png"];
 let PushArray = []; //Array für Push
 // -- Initialisierung für viele/variable Anzahl an Monster --
 let monsterArray = []; // Das Haupt-Array wurde erstellt und initialisiert!
