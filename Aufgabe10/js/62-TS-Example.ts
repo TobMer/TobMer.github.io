@@ -56,7 +56,7 @@ let playerName: string = "Spielername";                         // Ein paar glob
 let playerXP: number = 500 * 2;                                            // Stellt die gesammelte Erfahrung des Spielers dar.
 let playerXPperLevel: number = 500;               // Da es nur einen Spieler gibt, ergibt sich noch nicht viel Sinn darin, für den Spieler ein interface (im Sinne der Programmierung) zu erstellen.
 let playerlevel: number = 2;
-let playerItems: string = "Gabel";//WAffe
+let playerItems: string = "zerbrochenes Eisenschwert";//WAffe
 
 // Mehrere Arrays, welche jeweils Bauteile für Namen oder Eigenschaften der Monster beinhalten.
 let prefix: string[] = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Kniescheibenzertrümmernde(s) ", "zahnloses", "lactoseintolerantes", "Sandwichmachendes", "hüpfendes", "Fettspritzendes"]; // length = 10, da 10 Einträge. Von 0-9.
