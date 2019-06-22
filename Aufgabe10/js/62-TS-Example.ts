@@ -70,7 +70,7 @@ let Items: string[] = ["Stock", "Emmentaler", "Smartphone", "Sangria ", "Zahnsto
 
 
 //Bilderquellen
-let Bildquellen: string[] = ["bit.png", "falle.png", "komisch.png", "ritual.png", "doggo.png", "image.png", "giphy.gif"]
+let Bildquellen: string[] = ["bit.png", "falle.png", "komisch.png", "ritual.png", "doggo.png", "image.png",]
 
 let PushArray: number[] = [];//Array für Push
 

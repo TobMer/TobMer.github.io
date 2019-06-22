@@ -11,17 +11,17 @@ let playerName = "Spielername"; // Ein paar globale Variablen, welche den Spiele
 let playerXP = 500 * 2; // Stellt die gesammelte Erfahrung des Spielers dar.
 let playerXPperLevel = 500; // Da es nur einen Spieler gibt, ergibt sich noch nicht viel Sinn darin, für den Spieler ein interface (im Sinne der Programmierung) zu erstellen.
 let playerlevel = 2;
-let playerItems = "Gabel"; //WAffe
+let playerItems = "zerbrochenes Eisenschwert"; //WAffe
 // Mehrere Arrays, welche jeweils Bauteile für Namen oder Eigenschaften der Monster beinhalten.
 let prefix = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Kniescheibenzertrümmernde(s) ", "zahnloses", "lactoseintolerantes", "Sandwichmachendes", "hüpfendes", "Fettspritzendes"]; // length = 10, da 10 Einträge. Von 0-9.
-let monsterName = ["MrObercool", "Markaki", "Ungeziefer", "Muchacho", "Torbat", "Dr.Chaos"]; // length = 6, da 3 Einträge. Von 0-5.
+let monsterName = ["MrObercool", "Destroyer Dog", "Ungeziefer", "Muchacho", "Torbat", "Dr.Chaos"]; // length = 6, da 3 Einträge. Von 0-5.
 let suffix = [" des Verderbens", " mit Rheuma", " der Redundanz", " der Zerberstung", " der Müdigkeit", " der Langeweile", " aus dem Keller", " aus Furtwangen"]; // length = 10, da hier 10 Einträge sind. Von 0-9.
 let monsterModifers = ["Ist nervig", "Linkshänder", "Bier-Connoisseur", "checkt nix", "Prokrastiniert", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
 let monsterort = ["Hyrule", "Kakariko", "Gerudo-Stamm", "Yharnam", "Lothric", "Queelags Sphäre"];
 let Items = ["Stock", "Emmentaler", "Smartphone", "Sangria ", "Zahnstocher", "Handgranate", "Pantoffel", "Börek", "O-saft"];
 //Waffen der Monster
 //Bilderquellen
-let Bildquellen = ["bit.png", "falle.png", "komisch.png", "ritual.png", "doggo.png", "image.png"];
+let Bildquellen = ["bit.png", "falle.png", "komisch.png", "ritual.png", "doggo.png", "image.png",];
 let PushArray = []; //Array für Push
 // -- Initialisierung für viele/variable Anzahl an Monster --
 let monsterArray = []; // Das Haupt-Array wurde erstellt und initialisiert!
@@ -51,8 +51,8 @@ function generateMonster() {
         let newMonsterModifier = generateMonsterModifer(); // Eigens-gebaute Funktion, welche ein string-Array zurück gibt.
         let newMonsterItem = generateMonsterItem();
         let newImageSource = saveImageSrc;
-        let newmonsterort = generatemonsterort();
-        let newmonsterlevel = generatemonsterlevel();
+        let newmonsterort = generatemonsterort(); //Funktion für Monster ORt
+        let newmonsterlevel = generatemonsterlevel(); // Funktion für neues Monster Level
         console.log("MonsterXP" + newMonsterXP);
         let newMonster = {
             monsterName: newMonsterName,
