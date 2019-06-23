@@ -10,7 +10,7 @@ let monsterHolder = "monsterHoldingCell"; // ID für das Haupt-Element, in welch
 let playerName = "Tobias"; // Ein paar globale Variablen, welche den Spieler darstellen.
 let playerXP = 500 * 2; // Stellt die gesammelte Erfahrung des Spielers dar.
 let playerXPperLevel = 500; // Da es nur einen Spieler gibt, ergibt sich noch nicht viel Sinn darin, für den Spieler ein interface (im Sinne der Programmierung) zu erstellen.
-let playerlevel = 2;
+let playerlevel = 1;
 let playerItems = "zerbrochenes Eisenschwert"; //WAffe
 // Mehrere Arrays, welche jeweils Bauteile für Namen oder Eigenschaften der Monster beinhalten.
 let prefix = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Kniescheibenzertrümmernde(s) ", "zahnloses", "lactoseintolerantes", "Sandwichmachendes", "hüpfendes", "Fettspritzendes"]; // length = 10, da 10 Einträge. Von 0-9.
@@ -23,6 +23,7 @@ let Items = ["Stock", "Emmentaler", "Smartphone", "Sangria ", "Zahnstocher", "Ha
 //Bilderquellen
 let Bildquellen = ["bit.png", "falle.png", "komisch.png", "ritual.png", "doggo.png", "image.png",];
 let PushArray = []; //Array für Push
+let victory = false;
 // -- Initialisierung für viele/variable Anzahl an Monster --
 let monsterArray = []; // Das Haupt-Array wurde erstellt und initialisiert!
 console.log(monsterArray); // Gebe das Monster-Array einmal zu beginn aus. Es sollte leer sein.
@@ -212,10 +213,18 @@ function fightMonster(_index) {
 }
 // Aufgerufen, um das HTML-Element, welches das Spieler-Level darstellt, zu erneuern.
 function updatePlayerLevel(monsterlevel, monsterItem) {
-    playerlevel = Math.floor(playerXP / playerXPperLevel); // Spieler-Level = XP / XPproLevel
+    playerlevel = (Math.floor(playerXP / playerXPperLevel)) + 1; // Spieler-Level = XP / XPproLevel
+    if (playerlevel >= 20 && victory == false) { // IF Bedingung wenn das Spielerlev. größer gleich wird kommt ein Windowsalert.
+        window.alert("Gegner besiegt!");
+        victory = true;
+    }
+    if (playerlevel <= 0) {
+        alert("Du bist gestorben!");
+    }
     document.getElementById("xpCounter").innerHTML = "Player-Level: " + playerlevel + " (XP: " + playerXP + " / " + playerXPperLevel * (playerlevel + 1) + ")     Items: " + playerItems; // Baue den String für die Spieler-Info zusammen          
     console.log("Spieler " + playerName + " hat nun Level " + playerlevel + " mit " + playerXP + " (" + playerXPperLevel + " pro Level)    außerdem hat er ein(e) " + " bekommen!"); // Spieler-Level in der Konsole.
 }
+//function updatePlayerxp//
 //fügt demn Spieler neue Items hinzu
 function updatePlayerItems(neuesItem) {
     playerItems += ", " + neuesItem;
@@ -291,7 +300,7 @@ function fightWeakestMonster() {
         if (monsterArray[i].monsterlevel < findweakeastmonster) {
             _index = i;
             findweakeastmonster = monsterArray[i].monsterlevel;
-            console.log("IF IF IF IF");
+            console.log("Schwächste Monster bekämpft");
         }
     }
     if (monsterArray[_index].monsterlevel < playerlevel) {
