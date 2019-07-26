@@ -30,7 +30,7 @@ body{
 	#Kartendeck{	
 
 		width:10%;
-		height: 33%;
+		height: 40%;
 		background-color: #ffffff;
 		float: left;
 		margin-left: 10%;
@@ -41,13 +41,14 @@ body{
 
 	#Ablage{
 
-		width: 12%;
-		height: 33%;
+		width: 13%;
+		height: 40%;
 		background-color: #ffffff;
 		float: right;
 		margin-right: 10%;
 		border-radius:5%;
 		box-shadow: 0 3pc 20px #000000;
+		
 	}
 	
 	
