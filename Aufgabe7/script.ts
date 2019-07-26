@@ -58,7 +58,6 @@ function changecat() //Button 3
 }
 
 
-
 function gameb()//Gameboy Bild verändert sich,kleine Spielerei
 {
     document.getElementById("gameboy").innerHTML ="Bip-Bupp-Bip-Bip-Bubbb";
@@ -92,3 +91,18 @@ console.log("Wundervoll!");
 
 }
 
+
+class Formular {
+
+Name: string;
+Alter: number;
+hund: boolean;
+}
+
+var meinFormular:Formular = new Formular ();
+
+meinFormular.Name = "Hello";
+meinFormular.Alter = 27;
+meinFormular.hund = true;
+
+console.log(meinFormular);

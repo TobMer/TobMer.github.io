@@ -18,11 +18,11 @@ let monsterName = ["MrObercool", "Destroyer Dog", "Ungeziefer", "Muchacho", "Tor
 let suffix = [" des Verderbens", " mit Rheuma", " der Redundanz", " der Zerberstung", " der Müdigkeit", " der Langeweile", " aus dem Keller", " aus Furtwangen"]; // length = 10, da hier 10 Einträge sind. Von 0-9.
 let monsterModifers = ["Ist nervig", "Linkshänder", "Bier-Connoisseur", "checkt nix", "Prokrastiniert", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
 let monsterort = ["Hyrule", "Kakariko", "Gerudo-Stamm", "Yharnam", "Lothric", "Queelags Sphäre"];
-let Items = ["Stock", "Emmentaler", "Smartphone", "Sangria ", "Zahnstocher", "Handgranate", "Pantoffel", "Börek", "O-saft"];
+let Items = ["Grashalm", "Emmentaler", "Smartphone", "Sangria ", "Zahnstocher", "Handgranate", "Pantoffel", "Börek", "O-saft"];
 //Waffen der Monster
 //Bilderquellen
 let Bildquellen = ["bit.png", "falle.png", "komisch.png", "ritual.png", "doggo.png", "image.png",];
-let PushArray = []; //Array für Push
+let PushArray = []; //Array für Push, also Monster hinzufügen
 let victory = false;
 // -- Initialisierung für viele/variable Anzahl an Monster --
 let monsterArray = []; // Das Haupt-Array wurde erstellt und initialisiert!
@@ -133,13 +133,13 @@ function getRNGNumber(_maxNumber) {
    // rngNumber = 0;                                                      // Diese Zeile ist einer der drei Fehler in den Funktionen. Ich bin mal so frei und vermerke das hier. Einfach löschen und alles wird besser.
     return rngNumber;                                                   // Gebe diese Zahl zurück, Funktion kann ähnlich einer Variable in Rechnungen genutzt werden.
 */
-    return Math.floor(Math.random() * _maxNumber);
+    return Math.floor(Math.random() * _maxNumber); // gibt einen WErt zurück
 }
 // Diese Funktion gibt einen zusammengewürfelten Namen zurück.
 // Wird für die Monster-generierung verwendet!
 // Liefert einen zusammengesetzten String zurück.
 function generateMonsterName() {
-    let generatedMonsterName = "";
+    let generatedMonsterName = ""; ///Wieso wird hier nochmal generatemonsterNAme definiert?
     // Monster-Vorname
     // Mathematik! Hier wird eine zufällig-generierte Zahl benötigt.
     let rngNumber = getRNGNumber(prefix.length); // Der Rückgabewert der Funktion wird hier verwendet um den entsprechenden Teil des Namens (hier: Anfang) zu generieren.
@@ -213,7 +213,7 @@ function fightMonster(_index) {
 }
 // Aufgerufen, um das HTML-Element, welches das Spieler-Level darstellt, zu erneuern.
 function updatePlayerLevel(monsterlevel, monsterItem) {
-    playerlevel = (Math.floor(playerXP / playerXPperLevel)) + 1; // Spieler-Level = XP / XPproLevel
+    playerlevel = (Math.floor(playerXP / playerXPperLevel)) + 1; //Mathfloor rundet ab                                                           // Spieler-Level = XP / XPproLevel
     if (playerlevel >= 20 && victory == false) { // IF Bedingung wenn das Spielerlev. größer gleich wird kommt ein Windowsalert.
         window.alert("Gegner besiegt!");
         victory = true;
@@ -235,7 +235,7 @@ function removeMonsters(_index) {
     //document.getElementById(monsterHolder).innerHTML = "";
     //monsterArray = tempMonsterArray;
     //console.log("so viel is noch im array" + monsterArray.length);
-    let tempMonsterArray = [];
+    let tempMonsterArray = []; //ZUR FOR SCHLEIFE !!!
     let count = 0;
     while (count < _index - 1) {
         tempMonsterArray[count] = monsterArray[count];
@@ -255,7 +255,7 @@ function removeMonsters(_index) {
     //count++;
 }
 function pusher() {
-    PushArray.push(Math.random());
+    PushArray.push(Math.random()); // Push und math random lässt zufällige anzahl an Monster generieren.
     console.log(PushArray);
 }
 function updateHTML() {
