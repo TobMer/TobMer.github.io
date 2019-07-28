@@ -1,13 +1,12 @@
-//Listener
 window.onload = function () {
-    document.getElementById("Kartendeck").addEventListener("click", draw, false);
+    document.getElementById("Kartendeck").addEventListener("click", ziehe, false);
     generierekarten();
     spielstart();
     HTML();
 };
 ////////// ARRAYS /////////////////////////////////////////                                                                                                                  (ง ° ل͜ °)ง 
-let Kartendeck = []; //Kartendeck
-let Ablage = []; //Ablage Array
+let Kartendeck = []; //Der Array für das Kartendeck
+let Ablage = []; // Ablage Array
 let Gegner = []; //Gegnerkarten Array
 let Spieler = []; //Eigene Karten Array   
 ////////////////Funktionen////////////////////////////////////////////
@@ -219,7 +218,7 @@ function spielstart() {
     Kartendeck.splice(0, 1);
 }
 function HTML() {
-    document.getElementById("Spieler").innerHTML = ""; //Die Spielerkarten HTML
+    document.getElementById("Spieler").innerHTML = ""; //Die Spielerkarten  wird in Html generiert
     for (let i = 0; i <= Spieler.length - 1; i++) {
         let spielerkarten = document.createElement("img");
         spielerkarten.innerHTML = "";
@@ -227,49 +226,49 @@ function HTML() {
         spielerkarten.addEventListener("click", function () { playCard(i); }, false);
         document.getElementById("Spieler").appendChild(spielerkarten);
     }
-    document.getElementById("Kartendeck").innerHTML = ""; //Kartendeck wird erstellt
-    let deckCard = document.createElement("img");
-    deckCard.setAttribute("src", "img/card.jpg");
-    document.getElementById("Kartendeck").appendChild(deckCard);
-    document.getElementById("Gegner").innerHTML = ""; //Gegnerkarten HTML
+    document.getElementById("Kartendeck").innerHTML = ""; //Kartendeck wird Html wird generiert
+    let deckKarte = document.createElement("img");
+    deckKarte.setAttribute("src", "img/card.jpg");
+    document.getElementById("Kartendeck").appendChild(deckKarte);
+    document.getElementById("Gegner").innerHTML = ""; //Gegnerkarten HTML generiert
     for (let i = 0; i <= Gegner.length - 1; i++) {
-        let computerCard = document.createElement("img");
-        computerCard.innerHTML = "";
-        computerCard.setAttribute("src", "img/card.jpg");
-        document.getElementById("Gegner").appendChild(computerCard);
+        let gegnerkar = document.createElement("img");
+        gegnerkar.innerHTML = "";
+        gegnerkar.setAttribute("src", "img/card.jpg");
+        document.getElementById("Gegner").appendChild(gegnerkar);
     }
     document.getElementById("Ablage").innerHTML = "";
-    let ablageCard = document.createElement("img"); //Ablagestapel HTML
+    let ablageCard = document.createElement("img"); //Ablagestapel HTML generiert
     ablageCard.innerHTML = "";
     ablageCard.setAttribute("src", Ablage[Ablage.length - 1].img);
     document.getElementById("Ablage").appendChild(ablageCard);
 }
-function draw() {
+function ziehe() {
     Spieler.push(Kartendeck[0]);
     Kartendeck.splice(0, 1);
     HTML();
     gegnerspielt();
     console.log("Karte wurde gezogen");
 }
-function playCard(clickedCard) {
-    if (Spieler[clickedCard].kartenfarbe == Ablage[Ablage.length - 1].kartenfarbe || //Es wird geschaut ob die Karte legbar ist(von den Spielregeln her: gleiche Farbe o. gleiche Zahl)
-        Spieler[clickedCard].kartennummer == Ablage[Ablage.length - 1].kartennummer) {
-        Ablage.push(Spieler[clickedCard]);
-        Spieler.splice(clickedCard, 1);
+function playCard(klickkarte) {
+    if (Spieler[klickkarte].kartenfarbe == Ablage[Ablage.length - 1].kartenfarbe || Spieler[klickkarte].kartennummer == Ablage[Ablage.length - 1].kartennummer) { //Es wird geschaut ob die Karte legbar ist(von den Spielregeln her: gleiche Farbe o. gleiche Zahl)
+        Ablage.push(Spieler[klickkarte]); // Hier wird in die Ablage Array gepusht
+        Spieler.splice(klickkarte, 1); // Array: Spieler-> Karte wird aus diesem Array gelöscht
         HTML();
         if (Spieler.length == 0) {
-            alert("Yeah du hast den Gegner besiegt und gewonnen!!!"); //Alert ausgabe             
+            alert("Yeah du hast den Gegner besiegt und gewonnen!!!"); //Wenn der Spieler gewinnt wird dieses Alert angezeigt, dass er gewonnen hat-       
         }
         if (Gegner.length == 0) {
-            alert("Leider verloren. Spiele nochmal!!!");
+            alert("Leider verloren. Spiele nochmal!!!"); //Und wenn er verliert kommt , dass er verloren hat
         }
         gegnerspielt();
     }
-    console.log("Karte wurde gespielt");
+    console.log("Karte wurde gespielt"); //Text in Konsolenausgabe
 }
+//Der Gegner(Computer) schaut im Array der Reihe nach Karten und prüft. Stimmt die Nummer oder  Farbe mit der Karte auf dem Ablagestapel, legt der Computer die Karte ab
 function gegnerspielt() {
     let spieleyn = false;
-    for (let i = 0; i < Gegner.length; i++) { //Schaut Gegnerkarten durch ob sie legbar sind, falls ja wird Sie gelegt
+    for (let i = 0; i < Gegner.length; i++) {
         if (Gegner[i].kartenfarbe == Ablage[Ablage.length - 1].kartenfarbe ||
             Gegner[i].kartennummer == Ablage[Ablage.length - 1].kartennummer) {
             Ablage.push(Gegner[i]);
