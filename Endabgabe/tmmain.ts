@@ -1,25 +1,19 @@
 
 window.onload = function () {
   document.getElementById("Kartendeck").addEventListener("click", ziehe, false);
-  generierekarten();
+  generiereKarten();
 
 
-  spielstart();
+  spielStart();
   HTML();
 }
 
 
 
 
-////////// ARRAYS /////////////////////////////////////////                                                                                                                  (ง ° ل͜ °)ง 
-
-let Kartendeck: Stapel[] = [];         //Der Array für das Kartendeck
-let Ablage: Stapel[] = [];       // Ablage Array
-let Gegner: Stapel[] = [];     //Gegnerkarten Array
-let Spieler: Stapel[] = [];       //Eigene Karten Array   
 
 
-//////////Karten Interface////////
+//////////Karten Interface///////////////
 interface Stapel {
   kartenfarbe: string;
   kartennummer: number;
@@ -27,75 +21,26 @@ interface Stapel {
 }
 
 
+////////// ARRAYS /////////////////////////                                                                                                                 (ง ° ل͜ °)ง 
+
+let Kartendeck: Stapel[] = [];         //Der Array für das Kartendeck
+let Ablage: Stapel[] = [];       // Ablage Array
+let Gegner: Stapel[] = [];     //Gegnerkarten Array
+let Spieler: Stapel[] = [];       //Eigene Karten Array  
 
 
 
-////////////////Funktionen////////////////////////////////////////////
+////////////////Funktionen////////////////
 
 
 
-function generierekarten() {          //KArten werdn ins Kartendeck gepusht!//
+function generiereKarten() {          //KArten werdn ins Kartendeck gepusht!//
 
-  let r1: Stapel = {
-    kartenfarbe: "rot",       //Farbe der Karte
-    kartennummer: 1,          //Nummer der Karte
-    img: "img/r1.jpg"       //Bildquelle der Karte
-  };
-  Kartendeck.push(r1);
-
-  let r2: Stapel = {    //Hier die roten Karten
-    kartenfarbe: "rot",
-    kartennummer: 2,
-    img: "img/r2.jpg"
-  };
-  Kartendeck.push(r2);
-
-  let r3: Stapel = {
-    kartenfarbe: "rot",
-    kartennummer: 3,
-    img: "img/r3.jpg"
-  };
-  Kartendeck.push(r3);
-
-  let r4: Stapel = {
-    kartenfarbe: "rot",
-    kartennummer: 4,
-    img: "img/r4.jpg"
-  };
-  Kartendeck.push(r4);
-
-  let r5: Stapel = {
-    kartenfarbe: "rot",
-    kartennummer: 5,
-    img: "img/r5.jpg"
-  };
-  Kartendeck.push(r5);
-
-  let r6: Stapel = {
-    kartenfarbe: "rot",
-    kartennummer: 6,
-    img: "img/r6.jpg"
-  };
-  Kartendeck.push(r6);
-
-  let r7: Stapel = {
-    kartenfarbe: "rot",
-    kartennummer: 7,
-    img: "img/r7.jpg"
-  };
-  Kartendeck.push(r7);
-
-  let r8: Stapel = {
-    kartenfarbe: "rot",
-    kartennummer: 8,
-    img: "img/r8.jpg"
-  };
-  Kartendeck.push(r8);
 
   let ge1: Stapel = {            //Hier die gelben Karten
-    kartenfarbe: "gelb",
-    kartennummer: 1,
-    img: "img/gelb1.jpg"
+    kartenfarbe: "gelb", //Farbe der Karte
+    kartennummer: 1,//Nummer der Karte
+    img: "img/gelb1.jpg"//Bildquelle der Karte
   };
   Kartendeck.push(ge1);
 
@@ -147,6 +92,63 @@ function generierekarten() {          //KArten werdn ins Kartendeck gepusht!//
     img: "img/gelb8.jpg"
   };
   Kartendeck.push(ge8);
+
+
+  let r1: Stapel = {
+    kartenfarbe: "rot",
+    kartennummer: 1,
+    img: "img/r1.jpg"
+  };
+  Kartendeck.push(r1);
+
+  let r2: Stapel = {    //Hier die roten Karten
+    kartenfarbe: "rot",
+    kartennummer: 2,
+    img: "img/r2.jpg"
+  };
+  Kartendeck.push(r2);
+
+  let r3: Stapel = {
+    kartenfarbe: "rot",
+    kartennummer: 3,
+    img: "img/r3.jpg"
+  };
+  Kartendeck.push(r3);
+
+  let r4: Stapel = {
+    kartenfarbe: "rot",
+    kartennummer: 4,
+    img: "img/r4.jpg"
+  };
+  Kartendeck.push(r4);
+
+  let r5: Stapel = {
+    kartenfarbe: "rot",
+    kartennummer: 5,
+    img: "img/r5.jpg"
+  };
+  Kartendeck.push(r5);
+
+  let r6: Stapel = {
+    kartenfarbe: "rot",
+    kartennummer: 6,
+    img: "img/r6.jpg"
+  };
+  Kartendeck.push(r6);
+
+  let r7: Stapel = {
+    kartenfarbe: "rot",
+    kartennummer: 7,
+    img: "img/r7.jpg"
+  };
+  Kartendeck.push(r7);
+
+  let r8: Stapel = {
+    kartenfarbe: "rot",
+    kartennummer: 8,
+    img: "img/r8.jpg"
+  };
+  Kartendeck.push(r8);
 
   let gr1: Stapel = {                   //Hier die grünen Karten
     kartenfarbe: "grün",
@@ -270,7 +272,7 @@ function generierekarten() {          //KArten werdn ins Kartendeck gepusht!//
 
 /////////////////GAME START/////////////////////
 
-function spielstart() {                                //Fünf Karten werden an Gegner und Spieler verteilt und aus dem Stapel entfernt
+function spielStart() {                                //Fünf Karten werden an Gegner und Spieler verteilt und aus dem Stapel entfernt
   for (let i = 0; i < 5; i++) {
     Gegner.push(Kartendeck[0]);
     Kartendeck.splice(0, 1);
@@ -283,6 +285,24 @@ function spielstart() {                                //Fünf Karten werden an 
 }
 
 
+function karteSpielen(klickKarte: number) {
+  if (Spieler[klickKarte].kartenfarbe == Ablage[Ablage.length - 1].kartenfarbe || Spieler[klickKarte].kartennummer == Ablage[Ablage.length - 1].kartennummer) {           //Es wird geschaut ob die Karte legbar ist(von den Spielregeln her: gleiche Farbe o. gleiche Zahl)
+
+    Ablage.push(Spieler[klickKarte]);     // Hier wird in die Ablage Array gepusht
+    Spieler.splice(klickKarte, 1);        // Array: Spieler-> Karte wird aus diesem Array gelöscht
+    HTML();
+    if (Spieler.length == 0) {
+      alert("Yeah du hast den Gegner besiegt und gewonnen!!!");             //Wenn der Spieler gewinnt wird dieses Alert angezeigt, dass er gewonnen hat-       
+    }
+    if (Gegner.length == 0) {
+      alert("Leider verloren. Spiele nochmal!!!");                    //Und wenn er verliert kommt , dass er verloren hat
+    }
+    gegnerspielt();
+  }
+
+  console.log("Karte wurde gespielt")    //Text in Konsolenausgabe
+
+}
 
 
 function HTML() {
@@ -291,7 +311,7 @@ function HTML() {
     let spielerkarten: HTMLImageElement = document.createElement("img");
     spielerkarten.innerHTML = "";
     spielerkarten.setAttribute("src", Spieler[i].img);
-    spielerkarten.addEventListener("click", function () { playCard(i); }, false);
+    spielerkarten.addEventListener("click", function () { karteSpielen(i); }, false);
     document.getElementById("Spieler").appendChild(spielerkarten);
   }
 
@@ -326,35 +346,15 @@ function ziehe() {                                        //Die Funktion für Ka
   Kartendeck.splice(0, 1);
   HTML();
   gegnerspielt();
-  console.log("Karte wurde gezogen");
+  console.log("Karte gezogen");
 }
 
-
-
-function playCard(klickkarte: number) {
-  if (Spieler[klickkarte].kartenfarbe == Ablage[Ablage.length - 1].kartenfarbe || Spieler[klickkarte].kartennummer == Ablage[Ablage.length - 1].kartennummer) {           //Es wird geschaut ob die Karte legbar ist(von den Spielregeln her: gleiche Farbe o. gleiche Zahl)
-
-    Ablage.push(Spieler[klickkarte]);     // Hier wird in die Ablage Array gepusht
-    Spieler.splice(klickkarte, 1);        // Array: Spieler-> Karte wird aus diesem Array gelöscht
-    HTML();
-    if (Spieler.length == 0) {
-      alert("Yeah du hast den Gegner besiegt und gewonnen!!!");             //Wenn der Spieler gewinnt wird dieses Alert angezeigt, dass er gewonnen hat-       
-    }
-    if (Gegner.length == 0) {
-      alert("Leider verloren. Spiele nochmal!!!");                    //Und wenn er verliert kommt , dass er verloren hat
-    }
-    gegnerspielt();
-  }
-
-  console.log("Karte wurde gespielt")    //Text in Konsolenausgabe
-
-}
-
-//Der Gegner(Computer) schaut im Array der Reihe nach Karten und prüft. Stimmt die Nummer oder  Farbe mit der Karte auf dem Ablagestapel, legt der Computer die Karte ab
 
 
 function gegnerspielt() {
 
+
+  //Der Gegner(Computer) schaut im Array der Reihe nach Karten und prüft. Stimmt die Nummer oder  Farbe mit der Karte auf dem Ablagestapel, legt der Computer die Karte ab
   let spieleyn: boolean = false;
   for (let i: number = 0; i < Gegner.length; i++) {
     if (Gegner[i].kartenfarbe == Ablage[Ablage.length - 1].kartenfarbe ||
@@ -371,5 +371,6 @@ function gegnerspielt() {
     Kartendeck.splice(0, 1);
     HTML();
   }
+
 }                                                                                                                                                               //(ง ° ل͜ °)ง                                                      
 

@@ -52,8 +52,8 @@ body{
 	}
 	
 	
-
-#Spieler{
+/*Handkarten des Spielers*/
+#Spieler{ 
 	box-shadow: 0 3px 20p #000000;
 	background-color: #440444;
 	width:100%;
@@ -70,8 +70,8 @@ body{
 
 
 
-
-img {/*Styling der Karten*/
+/*Styling der Karten*/
+img {
 
 	border-radius: 10%;
     box-shadow: 0 3px 10px black;

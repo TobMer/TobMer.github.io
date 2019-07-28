@@ -1,68 +1,20 @@
 window.onload = function () {
     document.getElementById("Kartendeck").addEventListener("click", ziehe, false);
-    generierekarten();
-    spielstart();
+    generiereKarten();
+    spielStart();
     HTML();
 };
-////////// ARRAYS /////////////////////////////////////////                                                                                                                  (ง ° ل͜ °)ง 
+////////// ARRAYS /////////////////////////                                                                                                                 (ง ° ل͜ °)ง 
 let Kartendeck = []; //Der Array für das Kartendeck
 let Ablage = []; // Ablage Array
 let Gegner = []; //Gegnerkarten Array
-let Spieler = []; //Eigene Karten Array   
-////////////////Funktionen////////////////////////////////////////////
-function generierekarten() {
-    let r1 = {
-        kartenfarbe: "rot",
-        kartennummer: 1,
-        img: "img/r1.jpg" //Bildquelle der Karte
-    };
-    Kartendeck.push(r1);
-    let r2 = {
-        kartenfarbe: "rot",
-        kartennummer: 2,
-        img: "img/r2.jpg"
-    };
-    Kartendeck.push(r2);
-    let r3 = {
-        kartenfarbe: "rot",
-        kartennummer: 3,
-        img: "img/r3.jpg"
-    };
-    Kartendeck.push(r3);
-    let r4 = {
-        kartenfarbe: "rot",
-        kartennummer: 4,
-        img: "img/r4.jpg"
-    };
-    Kartendeck.push(r4);
-    let r5 = {
-        kartenfarbe: "rot",
-        kartennummer: 5,
-        img: "img/r5.jpg"
-    };
-    Kartendeck.push(r5);
-    let r6 = {
-        kartenfarbe: "rot",
-        kartennummer: 6,
-        img: "img/r6.jpg"
-    };
-    Kartendeck.push(r6);
-    let r7 = {
-        kartenfarbe: "rot",
-        kartennummer: 7,
-        img: "img/r7.jpg"
-    };
-    Kartendeck.push(r7);
-    let r8 = {
-        kartenfarbe: "rot",
-        kartennummer: 8,
-        img: "img/r8.jpg"
-    };
-    Kartendeck.push(r8);
+let Spieler = []; //Eigene Karten Array  
+////////////////Funktionen////////////////
+function generiereKarten() {
     let ge1 = {
         kartenfarbe: "gelb",
         kartennummer: 1,
-        img: "img/gelb1.jpg"
+        img: "img/gelb1.jpg" //Bildquelle der Karte
     };
     Kartendeck.push(ge1);
     let ge2 = {
@@ -107,6 +59,54 @@ function generierekarten() {
         img: "img/gelb8.jpg"
     };
     Kartendeck.push(ge8);
+    let r1 = {
+        kartenfarbe: "rot",
+        kartennummer: 1,
+        img: "img/r1.jpg"
+    };
+    Kartendeck.push(r1);
+    let r2 = {
+        kartenfarbe: "rot",
+        kartennummer: 2,
+        img: "img/r2.jpg"
+    };
+    Kartendeck.push(r2);
+    let r3 = {
+        kartenfarbe: "rot",
+        kartennummer: 3,
+        img: "img/r3.jpg"
+    };
+    Kartendeck.push(r3);
+    let r4 = {
+        kartenfarbe: "rot",
+        kartennummer: 4,
+        img: "img/r4.jpg"
+    };
+    Kartendeck.push(r4);
+    let r5 = {
+        kartenfarbe: "rot",
+        kartennummer: 5,
+        img: "img/r5.jpg"
+    };
+    Kartendeck.push(r5);
+    let r6 = {
+        kartenfarbe: "rot",
+        kartennummer: 6,
+        img: "img/r6.jpg"
+    };
+    Kartendeck.push(r6);
+    let r7 = {
+        kartenfarbe: "rot",
+        kartennummer: 7,
+        img: "img/r7.jpg"
+    };
+    Kartendeck.push(r7);
+    let r8 = {
+        kartenfarbe: "rot",
+        kartennummer: 8,
+        img: "img/r8.jpg"
+    };
+    Kartendeck.push(r8);
     let gr1 = {
         kartenfarbe: "grün",
         kartennummer: 1,
@@ -207,7 +207,7 @@ function generierekarten() {
     console.log("Kartendeck wird gemischt."); // Konsolenausgabe
 }
 /////////////////GAME START/////////////////////
-function spielstart() {
+function spielStart() {
     for (let i = 0; i < 5; i++) {
         Gegner.push(Kartendeck[0]);
         Kartendeck.splice(0, 1);
@@ -217,13 +217,28 @@ function spielstart() {
     Ablage.push(Kartendeck[0]); // Karte vom Stapel auf Ablage legen
     Kartendeck.splice(0, 1);
 }
+function karteSpielen(klickKarte) {
+    if (Spieler[klickKarte].kartenfarbe == Ablage[Ablage.length - 1].kartenfarbe || Spieler[klickKarte].kartennummer == Ablage[Ablage.length - 1].kartennummer) { //Es wird geschaut ob die Karte legbar ist(von den Spielregeln her: gleiche Farbe o. gleiche Zahl)
+        Ablage.push(Spieler[klickKarte]); // Hier wird in die Ablage Array gepusht
+        Spieler.splice(klickKarte, 1); // Array: Spieler-> Karte wird aus diesem Array gelöscht
+        HTML();
+        if (Spieler.length == 0) {
+            alert("Yeah du hast den Gegner besiegt und gewonnen!!!"); //Wenn der Spieler gewinnt wird dieses Alert angezeigt, dass er gewonnen hat-       
+        }
+        if (Gegner.length == 0) {
+            alert("Leider verloren. Spiele nochmal!!!"); //Und wenn er verliert kommt , dass er verloren hat
+        }
+        gegnerspielt();
+    }
+    console.log("Karte wurde gespielt"); //Text in Konsolenausgabe
+}
 function HTML() {
     document.getElementById("Spieler").innerHTML = ""; //Die Spielerkarten  wird in Html generiert
     for (let i = 0; i <= Spieler.length - 1; i++) {
         let spielerkarten = document.createElement("img");
         spielerkarten.innerHTML = "";
         spielerkarten.setAttribute("src", Spieler[i].img);
-        spielerkarten.addEventListener("click", function () { playCard(i); }, false);
+        spielerkarten.addEventListener("click", function () { karteSpielen(i); }, false);
         document.getElementById("Spieler").appendChild(spielerkarten);
     }
     document.getElementById("Kartendeck").innerHTML = ""; //Kartendeck wird Html wird generiert
@@ -248,25 +263,10 @@ function ziehe() {
     Kartendeck.splice(0, 1);
     HTML();
     gegnerspielt();
-    console.log("Karte wurde gezogen");
+    console.log("Karte gezogen");
 }
-function playCard(klickkarte) {
-    if (Spieler[klickkarte].kartenfarbe == Ablage[Ablage.length - 1].kartenfarbe || Spieler[klickkarte].kartennummer == Ablage[Ablage.length - 1].kartennummer) { //Es wird geschaut ob die Karte legbar ist(von den Spielregeln her: gleiche Farbe o. gleiche Zahl)
-        Ablage.push(Spieler[klickkarte]); // Hier wird in die Ablage Array gepusht
-        Spieler.splice(klickkarte, 1); // Array: Spieler-> Karte wird aus diesem Array gelöscht
-        HTML();
-        if (Spieler.length == 0) {
-            alert("Yeah du hast den Gegner besiegt und gewonnen!!!"); //Wenn der Spieler gewinnt wird dieses Alert angezeigt, dass er gewonnen hat-       
-        }
-        if (Gegner.length == 0) {
-            alert("Leider verloren. Spiele nochmal!!!"); //Und wenn er verliert kommt , dass er verloren hat
-        }
-        gegnerspielt();
-    }
-    console.log("Karte wurde gespielt"); //Text in Konsolenausgabe
-}
-//Der Gegner(Computer) schaut im Array der Reihe nach Karten und prüft. Stimmt die Nummer oder  Farbe mit der Karte auf dem Ablagestapel, legt der Computer die Karte ab
 function gegnerspielt() {
+    //Der Gegner(Computer) schaut im Array der Reihe nach Karten und prüft. Stimmt die Nummer oder  Farbe mit der Karte auf dem Ablagestapel, legt der Computer die Karte ab
     let spieleyn = false;
     for (let i = 0; i < Gegner.length; i++) {
         if (Gegner[i].kartenfarbe == Ablage[Ablage.length - 1].kartenfarbe ||
